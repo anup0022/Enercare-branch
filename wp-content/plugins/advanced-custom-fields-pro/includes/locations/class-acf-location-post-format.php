@@ -72,4 +72,5 @@ if ( ! class_exists( 'ACF_Location_Post_Format' ) ) :
 
 	// initialize
 	acf_register_location_type( 'ACF_Location_Post_Format' );
+
 endif; // class_exists check

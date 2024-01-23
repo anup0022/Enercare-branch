@@ -1,6 +1,7 @@
 <?php
 
 if ( ! class_exists( 'acf_field' ) ) :
+
 	#[AllowDynamicProperties]
 	class acf_field {
 
@@ -17,9 +18,6 @@ if ( ! class_exists( 'acf_field' ) ) :
 		public $l10n          = array();
 		public $public        = true;
 		public $show_in_rest  = true;
-		public $supports      = array(
-			'escaping_html' => false, // Set true when a field handles its own HTML escaping in format_value
-		);
 
 		/*
 		*  __construct
@@ -57,7 +55,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 			// value
 			$this->add_field_filter( 'acf/load_value', array( $this, 'load_value' ), 10, 3 );
 			$this->add_field_filter( 'acf/update_value', array( $this, 'update_value' ), 10, 3 );
-			$this->add_field_filter( 'acf/format_value', array( $this, 'format_value' ), 10, 4 );
+			$this->add_field_filter( 'acf/format_value', array( $this, 'format_value' ), 10, 3 );
 			$this->add_field_filter( 'acf/validate_value', array( $this, 'validate_value' ), 10, 4 );
 			$this->add_field_action( 'acf/delete_value', array( $this, 'delete_value' ), 10, 3 );
 
@@ -107,6 +105,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 		function initialize() {
 
 			/* do nothing */
+
 		}
 
 
@@ -135,6 +134,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// add
 			add_filter( $tag, $function_to_add, $priority, $accepted_args );
+
 		}
 
 
@@ -161,6 +161,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// add
 			$this->add_filter( $tag, $function_to_add, $priority, $accepted_args );
+
 		}
 
 
@@ -189,6 +190,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// add
 			add_action( $tag, $function_to_add, $priority, $accepted_args );
+
 		}
 
 
@@ -215,6 +217,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// add
 			$this->add_action( $tag, $function_to_add, $priority, $accepted_args );
+
 		}
 
 
@@ -240,6 +243,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// merge in defaults but keep order of $field keys
 			foreach ( $this->defaults as $k => $v ) {
+
 				if ( ! isset( $field[ $k ] ) ) {
 					$field[ $k ] = $v;
 				}
@@ -247,6 +251,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// return
 			return $field;
+
 		}
 
 
@@ -275,6 +280,7 @@ if ( ! class_exists( 'acf_field' ) ) :
 
 			// return
 			return $l10n;
+
 		}
 
 		/**
@@ -349,6 +355,9 @@ if ( ! class_exists( 'acf_field' ) ) :
 		public function format_value_for_rest( $value, $post_id, array $field ) {
 			return $value;
 		}
+
 	}
 
 endif; // class_exists check
+
+

@@ -79,7 +79,9 @@ if ( $is_subfield ) {
 
 		<?php
 		if ( $fields ) :
+
 			foreach ( $fields as $i => $field ) :
+
 				acf_get_view(
 					'acf-field-group/field',
 					array(
@@ -88,7 +90,9 @@ if ( $is_subfield ) {
 						'num_field_groups' => $num_field_groups,
 					)
 				);
+
 			endforeach;
+
 		endif;
 		?>
 

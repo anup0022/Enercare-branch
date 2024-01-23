@@ -301,6 +301,7 @@ if ( ! class_exists( 'ACF_Form_User' ) ) :
 })(jQuery);	
 </script>
 			<?php
+
 		}
 
 
@@ -382,6 +383,7 @@ if ( ! class_exists( 'ACF_Form_User' ) ) :
 
 	// instantiate
 	acf_new_instance( 'ACF_Form_User' );
+
 endif; // class_exists check
 
 ?>

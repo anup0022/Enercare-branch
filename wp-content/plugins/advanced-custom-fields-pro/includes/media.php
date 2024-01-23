@@ -74,7 +74,7 @@ if ( ! class_exists( 'ACF_Media' ) ) :
 		 * @return  void
 		 */
 		public function save_files( $post_id = 0 ) {
-			if ( isset( $_FILES['acf']['name'] ) ) { // phpcs:disable WordPress.Security.NonceVerification.Missing -- Verified upstream.
+			if ( isset( $_FILES['acf']['name'] ) ) {
 				acf_upload_files();
 			}
 		}
@@ -241,4 +241,5 @@ if ( ! class_exists( 'ACF_Media' ) ) :
 
 	// Instantiate.
 	acf_new_instance( 'ACF_Media' );
+
 endif; // class_exists check

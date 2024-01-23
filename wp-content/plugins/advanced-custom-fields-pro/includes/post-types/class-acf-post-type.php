@@ -846,6 +846,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 			// Import the post normally.
 			return $this->import_post( $acf_args );
 		}
+
 	}
 
 }

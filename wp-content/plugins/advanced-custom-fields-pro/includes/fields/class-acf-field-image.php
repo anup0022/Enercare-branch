@@ -42,6 +42,7 @@ if ( ! class_exists( 'acf_field_image' ) ) :
 
 			// filters
 			add_filter( 'get_media_item_args', array( $this, 'get_media_item_args' ) );
+
 		}
 
 
@@ -374,13 +375,18 @@ if ( ! class_exists( 'acf_field_image' ) ) :
 
 			// format
 			if ( $field['return_format'] == 'url' ) {
+
 				return wp_get_attachment_url( $value );
+
 			} elseif ( $field['return_format'] == 'array' ) {
+
 				return acf_get_attachment( $value );
+
 			}
 
 			// return
 			return $value;
+
 		}
 
 
@@ -401,6 +407,7 @@ if ( ! class_exists( 'acf_field_image' ) ) :
 
 			$vars['send'] = true;
 			return( $vars );
+
 		}
 
 
@@ -423,6 +430,7 @@ if ( ! class_exists( 'acf_field_image' ) ) :
 		function update_value( $value, $post_id, $field ) {
 
 			return acf_get_field_type( 'file' )->update_value( $value, $post_id, $field );
+
 		}
 
 
@@ -476,11 +484,13 @@ if ( ! class_exists( 'acf_field_image' ) ) :
 		public function format_value_for_rest( $value, $post_id, array $field ) {
 			return acf_format_numerics( $value );
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_image' );
+
 endif; // class_exists check
 
 ?>

@@ -465,9 +465,11 @@ if ( ! class_exists( 'ACF_Compatibility' ) ) :
 			// return
 			return $rule;
 		}
+
 	}
 
 	acf_new_instance( 'ACF_Compatibility' );
+
 endif; // class_exists check
 
 /*

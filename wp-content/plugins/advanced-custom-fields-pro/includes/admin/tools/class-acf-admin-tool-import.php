@@ -26,6 +26,7 @@ if ( ! class_exists( 'ACF_Admin_Tool_Import' ) ) :
 			$this->name  = 'import';
 			$this->title = __( 'Import Field Groups', 'acf' );
 			$this->icon  = 'dashicons-upload';
+
 		}
 
 
@@ -132,6 +133,7 @@ if ( ! class_exists( 'ACF_Admin_Tool_Import' ) ) :
 			?>
 		</div>
 			<?php
+
 		}
 
 		/**
@@ -289,10 +291,12 @@ if ( ! class_exists( 'ACF_Admin_Tool_Import' ) ) :
 
 			return acf_add_admin_notice( __( 'Nothing to import', 'acf' ), 'warning' );
 		}
+
 	}
 
 	// Initialize.
 	acf_register_admin_tool( 'ACF_Admin_Tool_Import' );
+
 endif; // class_exists check.
 
 ?>

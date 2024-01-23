@@ -81,8 +81,10 @@ if ( ! class_exists( 'ACF_Location_Taxonomy' ) ) :
 			}
 			return '';
 		}
+
 	}
 
 	// initialize
 	acf_register_location_type( 'ACF_Location_Taxonomy' );
+
 endif; // class_exists check

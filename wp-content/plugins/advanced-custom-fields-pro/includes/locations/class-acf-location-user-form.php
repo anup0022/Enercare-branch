@@ -78,4 +78,5 @@ if ( ! class_exists( 'ACF_Location_User_Form' ) ) :
 
 	// Register.
 	acf_register_location_type( 'ACF_Location_User_Form' );
+
 endif; // class_exists check

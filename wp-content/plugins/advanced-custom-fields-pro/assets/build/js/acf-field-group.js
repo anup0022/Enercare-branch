@@ -1,11 +1,11 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/advanced-custom-fields-pro/assets/src/js/_browse-fields-modal.js":
 /*!******************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_browse-fields-modal.js ***!
   \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -284,7 +284,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!************************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-compatibility.js ***!
   \************************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   var _acf = acf.getCompatibility(acf);
@@ -509,7 +509,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!*********************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-conditions.js ***!
   \*********************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   /**
@@ -882,7 +882,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!****************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-field.js ***!
   \****************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   acf.FieldObject = acf.Model.extend({
@@ -928,6 +928,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
       // The menu order
       //menu_order: 0
     },
+
     setup: function ($field) {
       // set $el
       this.$el = $field;
@@ -1215,19 +1216,11 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
     },
     onClickCopy: function (e) {
       e.stopPropagation();
-      if (!navigator.clipboard || $(e.target).is('input')) return;
-
-      // Find the value to copy depending on input or text elements.
-      let copyValue;
-      if ($(e.target).hasClass('acf-input-wrap')) {
-        copyValue = $(e.target).find('input').first().val();
-      } else {
-        copyValue = $(e.target).text();
-      }
-      navigator.clipboard.writeText(copyValue).then(() => {
-        $(e.target).closest('.copyable').addClass('copied');
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText($(e.target).text()).then(() => {
+        $(e.target).addClass('copied');
         setTimeout(function () {
-          $(e.target).closest('.copyable').removeClass('copied');
+          $(e.target).removeClass('copied');
         }, 2000);
       });
     },
@@ -1812,7 +1805,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!*****************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-fields.js ***!
   \*****************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   /**
@@ -2275,7 +2268,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!********************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-locations.js ***!
   \********************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   /**
@@ -2408,7 +2401,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!*******************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group-settings.js ***!
   \*******************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   /**
@@ -2695,7 +2688,7 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!**********************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/_field-group.js ***!
   \**********************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   /**
@@ -2999,12 +2992,12 @@ function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t =
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
   \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */   "default": function() { return /* binding */ _defineProperty; }
 /* harmony export */ });
 /* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js");
 
@@ -3029,28 +3022,24 @@ function _defineProperty(obj, key, value) {
 /*!****************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/toPrimitive.js ***!
   \****************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-<<<<<<< HEAD
-/* harmony export */   "default": () => (/* binding */ toPrimitive)
-=======
-/* harmony export */   "default": () => (/* binding */ _toPrimitive)
->>>>>>> 13262f2487541ffade3c7da9bfe1f1da0a891d50
+/* harmony export */   "default": function() { return /* binding */ _toPrimitive; }
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 
-function toPrimitive(t, r) {
-  if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(t) || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r || "default");
-    if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i)) return i;
+function _toPrimitive(input, hint) {
+  if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(res) !== "object") return res;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return ("string" === r ? String : Number)(t);
+  return (hint === "string" ? String : Number)(input);
 }
 
 /***/ }),
@@ -3059,24 +3048,20 @@ function toPrimitive(t, r) {
 /*!******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js ***!
   \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-<<<<<<< HEAD
-/* harmony export */   "default": () => (/* binding */ toPropertyKey)
-=======
-/* harmony export */   "default": () => (/* binding */ _toPropertyKey)
->>>>>>> 13262f2487541ffade3c7da9bfe1f1da0a891d50
+/* harmony export */   "default": function() { return /* binding */ _toPropertyKey; }
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/esm/toPrimitive.js");
 
 
-function toPropertyKey(t) {
-  var i = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(t, "string");
-  return "symbol" == (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i) ? i : String(i);
+function _toPropertyKey(arg) {
+  var key = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arg, "string");
+  return (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(key) === "symbol" ? key : String(key);
 }
 
 /***/ }),
@@ -3085,12 +3070,12 @@ function toPropertyKey(t) {
 /*!***********************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
   \***********************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */   "default": function() { return /* binding */ _typeof; }
 /* harmony export */ });
 function _typeof(o) {
   "@babel/helpers - typeof";
@@ -3132,49 +3117,49 @@ function _typeof(o) {
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 /*!*************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/acf-field-group.js ***!
@@ -3203,8 +3188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-})();
-
+}();
 /******/ })()
 ;
 //# sourceMappingURL=acf-field-group.js.map

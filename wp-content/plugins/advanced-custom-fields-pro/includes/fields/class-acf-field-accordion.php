@@ -60,6 +60,7 @@ if ( ! class_exists( 'acf_field__accordion' ) ) :
 			?>
 		<div <?php echo acf_esc_attrs( $atts ); ?>></div>
 			<?php
+
 		}
 
 
@@ -140,6 +141,7 @@ if ( ! class_exists( 'acf_field__accordion' ) ) :
 			// return
 			return $field;
 		}
+
 	}
 
 

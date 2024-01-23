@@ -28,6 +28,7 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 		function __construct() {
 
 			/* do nothing */
+
 		}
 
 		/**
@@ -143,6 +144,7 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 
 			// return
 			return $page;
+
 		}
 
 
@@ -171,11 +173,14 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 
 			// create default parent if not yet exists
 			if ( $page['parent_slug'] == 'acf-options' && ! $this->get_page( 'acf-options' ) ) {
+
 				$this->add_page( '' );
+
 			}
 
 			// return
 			return $this->add_page( $page );
+
 		}
 
 
@@ -211,6 +216,7 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 
 			// return
 			return $page;
+
 		}
 
 
@@ -230,6 +236,7 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 		function get_page( $slug ) {
 
 			return isset( $this->pages[ $slug ] ) ? $this->pages[ $slug ] : null;
+
 		}
 
 
@@ -249,7 +256,9 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 		function get_pages() {
 
 			return $this->pages;
+
 		}
+
 	}
 
 
@@ -271,10 +280,13 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 		global $acf_options_page;
 
 		if ( ! isset( $acf_options_page ) ) {
+
 			$acf_options_page = new acf_options_page();
+
 		}
 
 		return $acf_options_page;
+
 	}
 
 
@@ -284,6 +296,8 @@ if ( ! class_exists( 'acf_options_page' ) ) :
 
 	// initialize
 	acf_options_page();
+
+
 endif; // class_exists check
 
 
@@ -305,6 +319,7 @@ if ( ! function_exists( 'acf_add_options_page' ) ) :
 	function acf_add_options_page( $page = '' ) {
 
 		return acf_options_page()->add_page( $page );
+
 	}
 
 endif;
@@ -328,6 +343,7 @@ if ( ! function_exists( 'acf_add_options_sub_page' ) ) :
 	function acf_add_options_sub_page( $page = '' ) {
 
 		return acf_options_page()->add_sub_page( $page );
+
 	}
 
 endif;
@@ -352,6 +368,7 @@ if ( ! function_exists( 'acf_update_options_page' ) ) :
 	function acf_update_options_page( $slug = '', $data = array() ) {
 
 		return acf_options_page()->update_page( $slug, $data );
+
 	}
 
 endif;
@@ -387,6 +404,7 @@ if ( ! function_exists( 'acf_get_options_page' ) ) :
 
 		// return
 		return $page;
+
 	}
 
 endif;
@@ -422,7 +440,9 @@ if ( ! function_exists( 'acf_get_options_pages' ) ) :
 
 		// apply filter to each page
 		foreach ( $pages as $slug => &$page ) {
+
 			$page = acf_get_options_page( $slug );
+
 		}
 
 		// calculate parent => child redirectes
@@ -435,8 +455,10 @@ if ( ! function_exists( 'acf_get_options_pages' ) ) :
 
 			// add missing position
 			if ( ! $page['position'] ) {
-				++$_wp_last_utility_menu;
+
+				$_wp_last_utility_menu++;
 				$page['position'] = $_wp_last_utility_menu;
+
 			}
 
 			// bail early if no redirect
@@ -463,6 +485,7 @@ if ( ! function_exists( 'acf_get_options_pages' ) ) :
 
 				// update parent_slug to the first child
 				$sub_page['parent_slug'] = $child;
+
 			}
 
 			// finally update parent menu_slug
@@ -477,6 +500,7 @@ if ( ! function_exists( 'acf_get_options_pages' ) ) :
 
 		// return
 		return $pages;
+
 	}
 
 endif;
@@ -506,6 +530,7 @@ if ( ! function_exists( 'acf_set_options_page_title' ) ) :
 				'menu_title' => $title,
 			)
 		);
+
 	}
 
 endif;
@@ -534,6 +559,7 @@ if ( ! function_exists( 'acf_set_options_page_menu' ) ) :
 				'menu_title' => $title,
 			)
 		);
+
 	}
 
 endif;
@@ -562,6 +588,7 @@ if ( ! function_exists( 'acf_set_options_page_capability' ) ) :
 				'capability' => $capability,
 			)
 		);
+
 	}
 
 endif;
@@ -585,6 +612,9 @@ if ( ! function_exists( 'register_options_page' ) ) :
 	function register_options_page( $page = '' ) {
 
 		acf_add_options_sub_page( $page );
+
 	}
 
 endif;
+
+

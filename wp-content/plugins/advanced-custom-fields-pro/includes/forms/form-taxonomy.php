@@ -41,6 +41,7 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 			// delete
 			add_action( 'delete_term', array( $this, 'delete_term' ), 10, 4 );
+
 		}
 
 
@@ -64,7 +65,9 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 			// validate page
 			if ( $pagenow === 'edit-tags.php' || $pagenow === 'term.php' ) {
+
 				return true;
+
 			}
 
 			// return
@@ -90,7 +93,9 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 			// validate page
 			if ( ! $this->validate_page() ) {
+
 				return;
+
 			}
 
 			// vars
@@ -104,6 +109,7 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 			add_action( 'admin_footer', array( $this, 'admin_footer' ), 10, 1 );
 			add_action( "{$taxonomy}_add_form_fields", array( $this, 'add_term' ), 10, 1 );
 			add_action( "{$taxonomy}_edit_form", array( $this, 'edit_term' ), 10, 2 );
+
 		}
 
 
@@ -157,7 +163,9 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 				// wrap
 				echo '</div>';
+
 			}
+
 		}
 
 
@@ -191,6 +199,7 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 			// render
 			if ( ! empty( $field_groups ) ) {
+
 				acf_form_data(
 					array(
 						'screen'  => 'taxonomy',
@@ -210,8 +219,10 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 					$fields = acf_get_fields( $field_group );
 					acf_render_fields( $fields, $post_id, 'tr', 'field' );
 						echo '</table>';
+
 				}
 			}
+
 		}
 
 
@@ -309,6 +320,7 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 })(jQuery);	
 </script>
 			<?php
+
 		}
 
 
@@ -340,6 +352,7 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 
 			// save
 			acf_save_post( $post_id );
+
 		}
 
 
@@ -383,10 +396,13 @@ if ( ! class_exists( 'acf_form_taxonomy' ) ) :
 					$_search
 				)
 			);
+
 		}
+
 	}
 
 	new acf_form_taxonomy();
+
 endif;
 
 

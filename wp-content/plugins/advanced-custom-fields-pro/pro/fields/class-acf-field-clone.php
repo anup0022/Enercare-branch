@@ -49,6 +49,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			add_filter( 'acf/get_fields', array( $this, 'acf_get_fields' ), 5, 2 );
 			add_filter( 'acf/prepare_field', array( $this, 'acf_prepare_field' ), 10, 1 );
 			add_filter( 'acf/clone_field', array( $this, 'acf_clone_field' ), 10, 2 );
+
 		}
 
 
@@ -68,6 +69,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 		function is_enabled() {
 
 			return acf_is_filter_enabled( 'clone' );
+
 		}
 
 
@@ -98,6 +100,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// return
 			return $field;
+
 		}
 
 
@@ -137,7 +140,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 				$field = $fields[ $i ];
 
 				// $i
-				++$i;
+				$i++;
 
 				// bail early if not a clone field
 				if ( $field['type'] != 'clone' ) {
@@ -155,12 +158,14 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 				}
 
 				// replace this clone field with sub fields
-				--$i;
+				$i--;
 				array_splice( $fields, $i, 1, $field['sub_fields'] );
+
 			}
 
 			// return
 			return $fields;
+
 		}
 
 
@@ -201,6 +206,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// Field Group selector.
 				if ( acf_is_field_group_key( $selector ) ) {
+
 					$field_group = acf_get_field_group( $selector );
 					if ( ! $field_group ) {
 						continue;
@@ -233,11 +239,14 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			// loop
 			// run acf_clone_field() on each cloned field to modify name, key, etc
 			foreach ( array_keys( $fields ) as $i ) {
+
 				$fields[ $i ] = acf_clone_field( $fields[ $i ], $field );
+
 			}
 
 			// return
 			return $fields;
+
 		}
 
 
@@ -266,9 +275,11 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			// backup (used later)
 			// - backup only once (cloned clone fields can cause issues)
 			if ( ! isset( $field['__key'] ) ) {
+
 				$field['__key']   = $field['key'];
 				$field['__name']  = $field['_name'];
 				$field['__label'] = $field['label'];
+
 			}
 
 			// seamless
@@ -288,7 +299,9 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// label_format
 				if ( $clone_field['prefix_label'] ) {
+
 					$field['label'] = $clone_field['label'] . ' ' . $field['label'];
+
 				}
 			}
 
@@ -302,23 +315,30 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 				// modify the field _name (orig name)
 				// - this will allow fields to correctly understand the modified field
 				if ( $clone_field['display'] == 'seamless' ) {
+
 					$field['_name'] = $clone_field['_name'] . '_' . $field['_name'];
+
 				}
 			}
 
 			// required
 			if ( $clone_field['required'] ) {
+
 				$field['required'] = 1;
+
 			}
 
 			// type specific
 			// note: seamless clone fields will not be triggered
 			if ( $field['type'] == 'clone' ) {
+
 				$field = $this->acf_clone_clone_field( $field, $clone_field );
+
 			}
 
 			// return
 			return $field;
+
 		}
 
 
@@ -346,8 +366,10 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			// when cloning a clone field, it is important to also change the _name too
 			// this allows sub clone fields to appear correctly in get_row() row array
 			if ( $field['prefix_name'] ) {
+
 				$clone_field['name']  = $field['_name'];
 				$clone_field['_name'] = $field['_name'];
+
 			}
 
 			// bail early if no sub fields
@@ -360,10 +382,12 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// clone
 				$sub_field = acf_clone_field( $sub_field, $clone_field );
+
 			}
 
 			// return
 			return $field;
+
 		}
 
 
@@ -411,11 +435,14 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// loop
 			foreach ( $field['sub_fields'] as &$sub_field ) {
+
 				$sub_field['name'] = $prefix . $sub_field['name'];
+
 			}
 
 			// return
 			return $field;
+
 		}
 
 
@@ -452,27 +479,32 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// add value
 				$value[ $sub_field['key'] ] = acf_get_value( $post_id, $sub_field );
+
 			}
 
 			// return
 			return $value;
+
 		}
 
 
-		/**
-		 * This filter is appied to the $value after it is loaded from the db and before it is returned to the template
-		 *
-		 * @type  filter
-		 * @since 3.6
-		 *
-		 * @param mixed   $value       The value which was loaded from the database.
-		 * @param mixed   $post_id     The $post_id from which the value was loaded.
-		 * @param array   $field       The field array holding all the field options.
-		 * @param boolean $escape_html Should the field return a HTML safe formatted value.
-		 *
-		 * @return mixed $value The modified value.
-		 */
-		public function format_value( $value, $post_id, $field, $escape_html = false ) {
+		/*
+		*  format_value()
+		*
+		*  This filter is appied to the $value after it is loaded from the db and before it is returned to the template
+		*
+		*  @type    filter
+		*  @since   3.6
+		*  @date    23/01/13
+		*
+		*  @param   $value (mixed) the value which was loaded from the database
+		*  @param   $post_id (mixed) the $post_id from which the value was loaded
+		*  @param   $field (array) the field array holding all the field options
+		*
+		*  @return  $value (mixed) the modified value
+		*/
+
+		function format_value( $value, $post_id, $field ) {
 
 			// bail early if no value
 			if ( empty( $value ) ) {
@@ -489,14 +521,16 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 				$sub_value = acf_extract_var( $value, $sub_field['key'] );
 
 				// format value
-				$sub_value = acf_format_value( $sub_value, $post_id, $sub_field, $escape_html );
+				$sub_value = acf_format_value( $sub_value, $post_id, $sub_field );
 
 				// append to $row
 				$value[ $sub_field['__name'] ] = $sub_value;
+
 			}
 
 			// return
 			return $value;
+
 		}
 
 		/**
@@ -570,10 +604,12 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// key (backend)
 				if ( isset( $value[ $sub_field['key'] ] ) ) {
+
 					$v = $value[ $sub_field['key'] ];
 
 					// name (frontend)
 				} elseif ( isset( $value[ $sub_field['_name'] ] ) ) {
+
 					$v = $value[ $sub_field['_name'] ];
 
 					// empty
@@ -581,6 +617,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 					// input is not set (hidden by conditioanl logic)
 					continue;
+
 				}
 
 				// restore original field key
@@ -588,10 +625,12 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// update value
 				acf_update_value( $v, $post_id, $sub_field );
+
 			}
 
 			// return
 			return '';
+
 		}
 
 
@@ -622,10 +661,12 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 					// this is a normal value
 					$sub_field['value'] = $field['value'][ $sub_field['key'] ];
+
 				} elseif ( isset( $sub_field['default_value'] ) ) {
 
 					// no value, but this sub field has a default value
 					$sub_field['value'] = $sub_field['default_value'];
+
 				}
 
 				// update prefix to allow for nested values
@@ -642,10 +683,15 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// render
 			if ( $field['layout'] == 'table' ) {
+
 				$this->render_field_table( $field );
+
 			} else {
+
 				$this->render_field_block( $field );
+
 			}
+
 		}
 
 
@@ -671,10 +717,13 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			echo '<div class="acf-clone-fields acf-fields -' . $label_placement . ' -border">';
 
 			foreach ( $field['sub_fields'] as $sub_field ) {
+
 				acf_render_field_wrap( $sub_field );
+
 			}
 
 			echo '</div>';
+
 		}
 
 
@@ -731,7 +780,9 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			<?php
 
 			foreach ( $field['sub_fields'] as $sub_field ) {
+
 				acf_render_field_wrap( $sub_field, 'td' );
+
 			}
 
 			?>
@@ -739,6 +790,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 	</tbody>
 </table>
 			<?php
+
 		}
 
 
@@ -842,6 +894,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 					'ui'           => 1,
 				)
 			);
+
 		}
 
 
@@ -873,11 +926,14 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// loop
 			foreach ( $value as $v ) {
+
 				$choices[ $v ] = $this->get_clone_setting_choice( $v );
+
 			}
 
 			// return
 			return $choices;
+
 		}
 
 
@@ -904,22 +960,29 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 			// phpcs:disable WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
 			// ajax_fields
 			if ( isset( $_POST['fields'][ $selector ] ) ) {
+
 				return $this->get_clone_setting_field_choice( acf_sanitize_request_args( $_POST['fields'][ $selector ] ) );
+
 			}
 			// phpcs:enable WordPress.Security.NonceVerification.Missing
 
 			// field
 			if ( acf_is_field_key( $selector ) ) {
+
 				return $this->get_clone_setting_field_choice( acf_get_field( $selector ) );
+
 			}
 
 			// group
 			if ( acf_is_field_group_key( $selector ) ) {
+
 				return $this->get_clone_setting_group_choice( acf_get_field_group( $selector ) );
+
 			}
 
 			// return
 			return $selector;
+
 		}
 
 
@@ -956,6 +1019,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// return
 			return $title;
+
 		}
 
 
@@ -981,6 +1045,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// return
 			return sprintf( __( 'All fields from %s field group', 'acf' ), $field_group['title'] );
+
 		}
 
 
@@ -1032,6 +1097,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// strip slashes (search may be integer)
 				$s = wp_unslash( strval( $options['s'] ) );
+
 			}
 
 			// load groups
@@ -1056,15 +1122,18 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// field group found, stop looking
 				break;
+
 			}
 
 			// if field group was not found, this is a new field group (not yet saved)
 			if ( ! $field_group ) {
+
 				$field_group = array(
 					'ID'    => $options['post_id'],
 					'title' => $options['title'],
 					'key'   => '',
 				);
+
 			}
 
 			// move current field group to start of list
@@ -1083,10 +1152,14 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// get fields
 				if ( $field_group['ID'] == $options['post_id'] ) {
+
 					$fields = $options['fields'];
+
 				} else {
+
 					$fields = acf_get_fields( $field_group );
 					$fields = acf_prepare_fields_for_import( $fields );
+
 				}
 
 				// bail early if no fields
@@ -1096,7 +1169,9 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// show all children for field group search match
 				if ( $s !== false && stripos( $data['text'], $s ) !== false ) {
+
 					$ignore_s = true;
+
 				}
 
 				// populate children
@@ -1129,7 +1204,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 					}
 
 					// $i
-					++$i;
+					$i++;
 
 					// bail early if $i is out of bounds
 					if ( $i < $range_start || $i > $range_end ) {
@@ -1146,6 +1221,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 						'id'   => $child,
 						'text' => $text,
 					);
+
 				}
 
 				// bail early if no children
@@ -1171,6 +1247,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 					'limit'   => $limit,
 				)
 			);
+
 		}
 
 
@@ -1201,6 +1278,7 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			// return
 			return $field;
+
 		}
 
 
@@ -1243,10 +1321,12 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 				// validate
 				acf_validate_value( $value[ $k ], $sub_field, "{$input}[{$k}]" );
+
 			}
 
 			// return
 			return $valid;
+
 		}
 
 		/**
@@ -1295,11 +1375,13 @@ if ( ! class_exists( 'acf_field_clone' ) ) :
 
 			return $schema;
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_clone' );
+
 endif; // class_exists check
 
 ?>

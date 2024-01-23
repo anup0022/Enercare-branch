@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'ACF_Location' ) ) :
+
 	abstract class ACF_Location extends ACF_Legacy_Location {
 
 		/**

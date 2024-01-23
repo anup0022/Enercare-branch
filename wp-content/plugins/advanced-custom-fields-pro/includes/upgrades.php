@@ -324,6 +324,7 @@ function acf_upgrade_500_field( $field ) {
 
 		// remove sub fields from field
 		unset( $field['sub_fields'] );
+
 	} elseif ( $field['type'] == 'flexible_content' ) {
 
 		// loop over layouts
@@ -346,6 +347,7 @@ function acf_upgrade_500_field( $field ) {
 
 				// update
 				$field['layouts'][ $i ] = $layout;
+
 			}
 		}
 	}

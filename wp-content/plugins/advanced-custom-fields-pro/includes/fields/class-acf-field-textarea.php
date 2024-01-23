@@ -33,6 +33,7 @@ if ( ! class_exists( 'acf_field_textarea' ) ) :
 				'placeholder'   => '',
 				'rows'          => '',
 			);
+
 		}
 
 
@@ -79,6 +80,7 @@ if ( ! class_exists( 'acf_field_textarea' ) ) :
 
 			// return
 			acf_textarea_input( $atts );
+
 		}
 
 
@@ -193,14 +195,20 @@ if ( ! class_exists( 'acf_field_textarea' ) ) :
 
 			// bail early if no value or not for template
 			if ( empty( $value ) || ! is_string( $value ) ) {
+
 				return $value;
+
 			}
 
 			// new lines
 			if ( $field['new_lines'] == 'wpautop' ) {
+
 				$value = wpautop( $value );
+
 			} elseif ( $field['new_lines'] == 'br' ) {
+
 				$value = nl2br( $value );
+
 			}
 
 			// return
@@ -252,4 +260,7 @@ if ( ! class_exists( 'acf_field_textarea' ) ) :
 
 	// initialize
 	acf_register_field_type( 'acf_field_textarea' );
+
 endif; // class_exists check
+
+

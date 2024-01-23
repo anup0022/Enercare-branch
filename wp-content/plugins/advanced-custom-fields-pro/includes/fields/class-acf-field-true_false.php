@@ -34,6 +34,7 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 				'ui_on_text'    => '',
 				'ui_off_text'   => '',
 			);
+
 		}
 
 
@@ -94,6 +95,7 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 				$switch .= '<span class="acf-switch-off">' . $field['ui_off_text'] . '</span>';
 				$switch .= '<div class="acf-switch-slider"></div>';
 				$switch .= '</div>';
+
 			}
 
 			?>
@@ -112,6 +114,7 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 	</label>
 </div>
 			<?php
+
 		}
 
 
@@ -222,6 +225,7 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 		function format_value( $value, $post_id, $field ) {
 
 			return empty( $value ) ? false : true;
+
 		}
 
 
@@ -242,16 +246,21 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 
 			// bail early if not required
 			if ( ! $field['required'] ) {
+
 				return $valid;
+
 			}
 
 			// value may be '0'
 			if ( ! $value ) {
+
 				return false;
+
 			}
 
 			// return
 			return $valid;
+
 		}
 
 
@@ -277,6 +286,7 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 
 			// return
 			return $field;
+
 		}
 
 		/**
@@ -309,11 +319,13 @@ if ( ! class_exists( 'acf_field_true_false' ) ) :
 		public function format_value_for_rest( $value, $post_id, array $field ) {
 			return (bool) $value;
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_true_false' );
+
 endif; // class_exists check
 
 ?>

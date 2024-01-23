@@ -34,6 +34,7 @@ if ( ! class_exists( 'acf_field_range' ) ) :
 				'prepend'       => '',
 				'append'        => '',
 			);
+
 		}
 
 
@@ -274,9 +275,14 @@ if ( ! class_exists( 'acf_field_range' ) ) :
 		public function format_value_for_rest( $value, $post_id, array $field ) {
 			return acf_format_numerics( $value );
 		}
+
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_range' );
+
 endif; // class_exists check
+
+

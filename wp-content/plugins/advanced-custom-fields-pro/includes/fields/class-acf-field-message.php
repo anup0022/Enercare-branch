@@ -32,6 +32,7 @@ if ( ! class_exists( 'acf_field_message' ) ) :
 				'esc_html'  => 0,
 				'new_lines' => 'wpautop',
 			);
+
 		}
 
 
@@ -57,18 +58,25 @@ if ( ! class_exists( 'acf_field_message' ) ) :
 
 			// esc_html
 			if ( $field['esc_html'] ) {
+
 				$m = esc_html( $m );
+
 			}
 
 			// new lines
 			if ( $field['new_lines'] == 'wpautop' ) {
+
 				$m = wpautop( $m );
+
 			} elseif ( $field['new_lines'] == 'br' ) {
+
 				$m = nl2br( $m );
+
 			}
 
 			// return
 			echo acf_esc_html( $m );
+
 		}
 
 
@@ -142,6 +150,7 @@ if ( ! class_exists( 'acf_field_message' ) ) :
 
 			// return
 			return $field;
+
 		}
 
 
@@ -175,9 +184,13 @@ if ( ! class_exists( 'acf_field_message' ) ) :
 			// return
 			return $field;
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_message' );
+
 endif; // class_exists check
+
+

@@ -485,4 +485,5 @@ class ACF_Repeater_Table {
 		</div>
 		<?php
 	}
+
 }

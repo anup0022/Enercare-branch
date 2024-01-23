@@ -1,11 +1,11 @@
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-ui-options-page.js":
 /*!**********************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-ui-options-page.js ***!
   \**********************************************************************************/
-/***/ (() => {
+/***/ (function() {
 
 (function ($, undefined) {
   const parentPageSelectTemplate = function (selection) {
@@ -88,7 +88,7 @@
         const fieldGroupTitle = $('.acf-headerbar-title-field').val();
         const ajaxData = {
           action: 'acf/create_options_page',
-          acf_parent_page_choices: this.acf.data.optionPageParentOptions ? this.acf.data.optionPageParentOptions : []
+          acf_parent_page_choices: this.acf.data.acfParentPageChoices ? this.acf.data.acfParentPageChoices : []
         };
         if (fieldGroupTitle.length) {
           ajaxData.field_group_title = fieldGroupTitle;
@@ -202,49 +202,49 @@
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
+/******/ 		__webpack_require__.n = function(module) {
 /******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
 /******/ 			__webpack_require__.d(getter, { a: getter });
 /******/ 			return getter;
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
+!function() {
 "use strict";
 /*!*************************************************************************************!*\
   !*** ./src/advanced-custom-fields-pro/assets/src/js/pro/acf-pro-ui-options-page.js ***!
@@ -253,8 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _acf_ui_options_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_acf-ui-options-page */ "./src/advanced-custom-fields-pro/assets/src/js/pro/_acf-ui-options-page.js");
 /* harmony import */ var _acf_ui_options_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_acf_ui_options_page__WEBPACK_IMPORTED_MODULE_0__);
 
-})();
-
+}();
 /******/ })()
 ;
 //# sourceMappingURL=acf-pro-ui-options-page.js.map

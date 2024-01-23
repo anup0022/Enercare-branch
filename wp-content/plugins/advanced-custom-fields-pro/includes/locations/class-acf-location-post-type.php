@@ -88,8 +88,10 @@ if ( ! class_exists( 'ACF_Location_Post_Type' ) ) :
 			}
 			return '';
 		}
+
 	}
 
 	// initialize
 	acf_register_location_type( 'ACF_Location_Post_Type' );
+
 endif; // class_exists check

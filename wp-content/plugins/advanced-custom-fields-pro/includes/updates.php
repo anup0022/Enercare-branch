@@ -1,68 +1,58 @@
 <?php
-/**
- * The ACF Update Class, responsible for talking to the connect API server and injecting PRO's update data into WordPress.
- *
- * @package ACF
- */
 
-// Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+	exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'ACF_Updates' ) ) {
+if ( ! class_exists( 'ACF_Updates' ) ) :
 
-	/**
-	 * class for handling API services.
-	 */
 	class ACF_Updates {
 
-		/**
-		 * The ACF_Updates version
-		 *
-		 * @var string
-		 */
-		public $version = '2.4';
+		/** @var string The ACF_Updates version */
+		var $version = '2.4';
 
-		/**
-		 * The array of registered plugins
-		 *
-		 * @var array
-		 */
-		public $plugins = array();
+		/** @var array The array of registered plugins */
+		var $plugins = array();
 
-		/**
-		 * Counts the number of plugin update checks
-		 *
-		 * @var integer
-		 */
-		public $checked = 0;
+		/** @var int Counts the number of plugin update checks */
+		var $checked = 0;
 
-		/**
-		 * Sets up the class functionality.
-		 *
-		 * @since   5.0.0
-		 */
-		public function __construct() {
+		/*
+		*  __construct
+		*
+		*  Sets up the class functionality.
+		*
+		*  @date    5/03/2014
+		*  @since   5.0.0
+		*
+		*  @param   void
+		*  @return  void
+		*/
 
-			// append update information to transient.
+		function __construct() {
+
+			// append update information to transient
 			add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'modify_plugins_transient' ), 10, 1 );
 
-			// modify plugin data visible in the 'View details' popup.
+			// modify plugin data visible in the 'View details' popup
 			add_filter( 'plugins_api', array( $this, 'modify_plugin_details' ), 10, 3 );
 		}
 
-		/**
-		 * Registeres a plugin for updates.
-		 *
-		 * @since   5.5.10
-		 *
-		 * @param   array $plugin The plugin array.
-		 * @return  void
-		 */
-		public function add_plugin( $plugin ) {
+		/*
+		*  add_plugin
+		*
+		*  Registeres a plugin for updates.
+		*
+		*  @date    8/4/17
+		*  @since   5.5.10
+		*
+		*  @param   array $plugin The plugin array.
+		*  @return  void
+		*/
 
-			// validate.
+		function add_plugin( $plugin ) {
+
+			// validate
 			$plugin = wp_parse_args(
 				$plugin,
 				array(
@@ -80,22 +70,26 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			}
 
-			// add if is active plugin (not included in theme).
+			// add if is active plugin (not included in theme)
 			if ( is_plugin_active( $plugin['basename'] ) ) {
 				$this->plugins[ $plugin['basename'] ] = $plugin;
 			}
 		}
 
 		/**
-		 * Returns a registered plugin for the give key and value.
+		 *  get_plugin_by
 		 *
-		 * @since   5.7.2
+		 *  Returns a registered plugin for the give key and value.
 		 *
-		 * @param   string $key   The array key to compare.
-		 * @param   string $value The value to compare against.
-		 * @return  array|false
+		 *  @date    3/8/18
+		 *  @since   5.7.2
+		 *
+		 *  @param   string $key The array key to compare
+		 *  @param   string $value The value to compare against
+		 *  @return  array|false
 		 */
-		public function get_plugin_by( $key = '', $value = null ) {
+
+		function get_plugin_by( $key = '', $value = null ) {
 			foreach ( $this->plugins as $plugin ) {
 				if ( $plugin[ $key ] === $value ) {
 					return $plugin;
@@ -104,16 +98,19 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 			return false;
 		}
 
-		/**
+		/*
+		 * request
+		 *
 		 * Makes a request to the ACF connect server.
 		 *
+		 * @date    8/4/17
 		 * @since   5.5.10
 		 *
 		 * @param   string $endpoint The API endpoint.
-		 * @param   array  $body     The body to post.
+		 * @param   array $body The body to post.
 		 * @return  (array|string|WP_Error)
 		 */
-		public function request( $endpoint = '', $body = null ) {
+		function request( $endpoint = '', $body = null ) {
 
 			// Determine URL.
 			$url = "https://connect.advancedcustomfields.com/$endpoint";
@@ -138,7 +135,7 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				return $raw_response;
 
 				// Handle http error.
-			} elseif ( wp_remote_retrieve_response_code( $raw_response ) !== 200 ) {
+			} elseif ( wp_remote_retrieve_response_code( $raw_response ) != 200 ) {
 				return new WP_Error( 'server_error', wp_remote_retrieve_response_message( $raw_response ) );
 			}
 
@@ -150,17 +147,18 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				return wp_remote_retrieve_body( $raw_response );
 			}
 
+			// return
 			return $json;
 		}
 
 		/**
-		 * Returns update information for the given plugin id.
+		 *  Returns update information for the given plugin id.
 		 *
-		 * @since   5.5.10
+		 *  @since   5.5.10
 		 *
-		 * @param   string  $id          The plugin id such as 'pro'.
-		 * @param   boolean $force_check Bypasses cached result. Defaults to false.
-		 * @return  array|WP_Error
+		 *  @param   string  $id The plugin id such as 'pro'.
+		 *  @param   boolean $force_check Bypasses cached result. Defaults to false.
+		 *  @return  array|WP_Error
 		 */
 		public function get_plugin_info( $id = '', $force_check = false ) {
 			$transient_name = 'acf_plugin_info_' . $id;
@@ -194,7 +192,7 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 		 *
 		 * @since   5.7.2
 		 *
-		 * @param string  $basename    The plugin basename.
+		 * @param string  $basename The plugin basename.
 		 * @param boolean $force_check Bypasses cached result. Defaults to false.
 		 * @return array|false
 		 */
@@ -215,7 +213,7 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 		 *
 		 * @since   6.2.1
 		 *
-		 * @param string  $basename    The plugin basename.
+		 * @param string  $basename The plugin basename.
 		 * @param boolean $force_check Bypasses cached result. Defaults to false.
 		 * @return array|false
 		 */
@@ -233,30 +231,35 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 
 
 		/**
-		 * Checks for plugin updates.
+		 *  get_plugin_updates
 		 *
-		 * @since   5.6.9
-		 * @since   5.7.2 Added 'checked' comparison
+		 *  Checks for plugin updates.
 		 *
-		 * @param   boolean $force_check Bypasses cached result. Defaults to false.
-		 * @return  array|WP_Error.
+		 *  @date    8/7/18
+		 *  @since   5.6.9
+		 *  @since   5.7.2 Added 'checked' comparison
+		 *
+		 *  @param   boolean $force_check Bypasses cached result. Defaults to false.
+		 *  @return  array|WP_Error.
 		 */
-		public function get_plugin_updates( $force_check = false ) {
+
+		function get_plugin_updates( $force_check = false ) {
+			// var
 			$transient_name = 'acf_plugin_updates';
 
-			// Construct array of 'checked' plugins.
-			// Sort by key to avoid detecting change due to "include order".
+			// construct array of 'checked' plugins
+			// sort by key to avoid detecting change due to "include order"
 			$checked = array();
 			foreach ( $this->plugins as $basename => $plugin ) {
 				$checked[ $basename ] = $plugin['version'];
 			}
 			ksort( $checked );
 
-			// $force_check prevents transient lookup.
+			// $force_check prevents transient lookup
 			if ( ! $force_check ) {
 				$transient = get_transient( $transient_name );
 
-				// If cached response was found, compare $transient['checked'] against $checked and ignore if they don't match (plugins/versions have changed).
+				// if cached response was found, compare $transient['checked'] against $checked and ignore if they don't match (plugins/versions have changed)
 				if ( is_array( $transient ) ) {
 					$transient_checked = isset( $transient['checked'] ) ? $transient['checked'] : array();
 					if ( wp_json_encode( $checked ) !== wp_json_encode( $transient_checked ) ) {
@@ -268,6 +271,7 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				}
 			}
 
+			// vars
 			$post = array(
 				'plugins' => wp_json_encode( $this->plugins ),
 				'wp'      => wp_json_encode(
@@ -290,10 +294,10 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				),
 			);
 
-			// Check update from connect.
+			// request
 			$response = $this->request( 'v2/plugins/update-check', $post );
 
-			// Append checked reference.
+			// append checked reference
 			if ( is_array( $response ) ) {
 				$response['checked'] = $checked;
 
@@ -303,43 +307,45 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				}
 			}
 
-			// Allow json to include expiration but force minimum and max for safety.
+			// allow json to include expiration but force minimum and max for safety
 			$expiration = $this->get_expiration( $response, DAY_IN_SECONDS, MONTH_IN_SECONDS );
 
-			// Update transient and return.
+			// update transient
 			set_transient( $transient_name, $response, $expiration );
+
+			// return
 			return $response;
 		}
 
 		/**
-		 * This function safely gets the expiration value from a response.
+		 *  This function safely gets the expiration value from a response.
 		 *
-		 * @since   5.6.9
+		 *  @since   5.6.9
 		 *
-		 * @param   mixed   $response The response from the server. Default false.
-		 * @param   integer $min      The minimum expiration limit. Default 0.
-		 * @param   integer $max      The maximum expiration limit. Default 0.
-		 * @return  integer
+		 *  @param   mixed $response The response from the server. Default false.
+		 *  @param   int   $min The minimum expiration limit. Default 0.
+		 *  @param   int   $max The maximum expiration limit. Default 0.
+		 *  @return  int
 		 */
 		public function get_expiration( $response = false, $min = 0, $max = 0 ) {
 			$expiration = 0;
 
-			// Check possible error conditions.
+			// check possible error conditions.
 			if ( is_wp_error( $response ) || is_string( $response ) ) {
 				return 5 * MINUTE_IN_SECONDS;
 			}
 
-			// Use the server requested expiration if present.
+			// use the server requested expiration if present.
 			if ( is_array( $response ) && isset( $response['expiration'] ) ) {
 				$expiration = (int) $response['expiration'];
 			}
 
-			// Use the minimum if neither check matches, or ensure the server expiration isn't lower than our minimum.
+			// use the minimum if neither check matches, or ensure the server expiration isn't lower than our minimum.
 			if ( $expiration < $min ) {
 				return $min;
 			}
 
-			// Ensure the server expiration isn't higher than our max.
+			// ensure the server expiration isn't higher than our max.
 			if ( $expiration > $max ) {
 				return $max;
 			}
@@ -347,43 +353,50 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 			return $expiration;
 		}
 
-		/**
-		 * Deletes transients and allows a fresh lookup.
-		 *
-		 * @since   5.5.10
-		 */
-		public function refresh_plugins_transient() {
+		/*
+		*  refresh_plugins_transient
+		*
+		*  Deletes transients and allows a fresh lookup.
+		*
+		*  @date    11/4/17
+		*  @since   5.5.10
+		*
+		*  @param   void
+		*  @return  void
+		*/
+
+		function refresh_plugins_transient() {
 			delete_site_transient( 'update_plugins' );
 			delete_transient( 'acf_plugin_updates' );
 		}
 
 		/**
-		 * Called when WP updates the 'update_plugins' site transient. Used to inject ACF plugin update info.
+		 *  Called when WP updates the 'update_plugins' site transient. Used to inject ACF plugin update info.
 		 *
-		 * @since   5.0.0
+		 *  @since   5.0.0
 		 *
-		 * @param object $transient The current transient value.
-		 * @return object $transient The modified transient value.
+		 *  @param object $transient The current transient value.
+		 *  @return object $transient The modified transient value.
 		 */
 		public function modify_plugins_transient( $transient ) {
 
-			// Bail early if no response (error).
+			// bail early if no response (error).
 			if ( ! isset( $transient->response ) ) {
 				return $transient;
 			}
 
-			// Ensure no_update is set for back compat.
+			// ensure no_update is set for back compat.
 			if ( ! isset( $transient->no_update ) ) {
 				$transient->no_update = array();
 			}
 
-			// Force-check (only once).
+			// force-check (only once).
 			$force_check = ( $this->checked == 0 ) ? ! empty( $_GET['force-check'] ) : false; // phpcs:ignore -- False positive, value not used.
 
-			// Fetch updates (this filter is called multiple times during a single page load).
+			// fetch updates (this filter is called multiple times during a single page load).
 			$updates = $this->get_plugin_updates( $force_check );
 
-			// Append ACF pro plugins.
+			// append ACF pro plugins.
 			if ( is_array( $updates ) ) {
 				if ( ! empty( $updates['plugins'] ) ) {
 					foreach ( $updates['plugins'] as $basename => $update ) {
@@ -397,50 +410,56 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 				}
 			}
 
-			++$this->checked;
+			$this->checked++;
 
 			return $transient;
 		}
 
-		/**
-		 * Returns the plugin data visible in the 'View details' popup
-		 *
-		 * @since   5.0.0
-		 *
-		 * @param   object $result The current result of plugin data.
-		 * @param   string $action The action being performed.
-		 * @param   object $args   Data about the plugin being retried.
-		 * @return  $result
-		 */
-		public function modify_plugin_details( $result, $action = null, $args = null ) {
+		/*
+		*  modify_plugin_details
+		*
+		*  Returns the plugin data visible in the 'View details' popup
+		*
+		*  @date    17/01/2014
+		*  @since   5.0.0
+		*
+		*  @param   object $result
+		*  @param   string $action
+		*  @param   object $args
+		*  @return  $result
+		*/
 
+		function modify_plugin_details( $result, $action = null, $args = null ) {
+
+			// vars
 			$plugin = false;
 
-			// Only for 'plugin_information' action.
+			// only for 'plugin_information' action
 			if ( $action !== 'plugin_information' ) {
 				return $result;
 			}
 
-			// Find plugin via slug.
+			// find plugin via slug
 			$plugin = $this->get_plugin_by( 'slug', $args->slug );
 			if ( ! $plugin ) {
 				return $result;
 			}
 
-			// Get data from connect or cache.
+			// connect
 			$response = $this->get_plugin_info( $plugin['id'] );
 
-			// Bail early if no response.
+			// bail early if no response
 			if ( ! is_array( $response ) ) {
 				return $result;
 			}
 
-			// Remove tags (different context).
+			// remove tags (different context)
 			unset( $response['tags'] );
 
-			// Convert to object.
+			// convert to object
 			$response = (object) $response;
 
+			// sections
 			$sections = array(
 				'description'    => '',
 				'installation'   => '',
@@ -452,21 +471,27 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 			}
 			$response->sections = $sections;
 
+			// return
 			return $response;
 		}
 	}
 
 
-	/**
-	 * The main function responsible for returning the acf_updates singleton.
-	 * Use this function like you would a global variable, except without needing to declare the global.
-	 *
-	 * Example: <?php $acf_updates = acf_updates(); ?>
-	 *
-	 * @since   5.5.12
-	 *
-	 * @return ACF_Updates The singleton instance of ACF_Updates.
-	 */
+	/*
+	*  acf_updates
+	*
+	*  The main function responsible for returning the one true acf_updates instance to functions everywhere.
+	*  Use this function like you would a global variable, except without needing to declare the global.
+	*
+	*  Example: <?php $acf_updates = acf_updates(); ?>
+	*
+	*  @date    9/4/17
+	*  @since   5.5.12
+	*
+	*  @param   void
+	*  @return  object
+	*/
+
 	function acf_updates() {
 		global $acf_updates;
 		if ( ! isset( $acf_updates ) ) {
@@ -475,15 +500,24 @@ if ( ! class_exists( 'ACF_Updates' ) ) {
 		return $acf_updates;
 	}
 
-	/**
-	 * Alias of acf_updates()->add_plugin().
-	 *
-	 * @since   5.5.10
-	 *
-	 * @param   array $plugin Plugin data array.
-	 */
+
+	/*
+	*  acf_register_plugin_update
+	*
+	*  Alias of acf_updates()->add_plugin().
+	*
+	*  @type    function
+	*  @date    12/4/17
+	*  @since   5.5.10
+	*
+	*  @param   array $plugin
+	*  @return  void
+	*/
+
 	function acf_register_plugin_update( $plugin ) {
 		acf_updates()->add_plugin( $plugin );
 	}
 
-}
+endif; // class_exists check
+
+

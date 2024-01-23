@@ -39,4 +39,5 @@ if ( ! class_exists( 'ACF_Ajax_User_Setting' ) ) :
 	}
 
 	acf_new_instance( 'ACF_Ajax_User_Setting' );
+
 endif; // class_exists check

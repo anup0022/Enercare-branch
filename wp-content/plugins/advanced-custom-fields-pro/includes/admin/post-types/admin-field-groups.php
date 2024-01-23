@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'ACF_Admin_Field_Groups' ) ) :
+
 	#[AllowDynamicProperties]
 	class ACF_Admin_Field_Groups extends ACF_Admin_Internal_Post_Type_List {
 
@@ -54,7 +55,7 @@ if ( ! class_exists( 'ACF_Admin_Field_Groups' ) ) :
 		 */
 		public function include_pro_features() {
 			// Bail if on PRO.
-			if ( acf_is_pro() && acf_pro_is_license_active() ) {
+			if ( acf_is_pro() ) {
 				return;
 			}
 
@@ -385,8 +386,10 @@ if ( ! class_exists( 'ACF_Admin_Field_Groups' ) ) :
 
 			return $text;
 		}
+
 	}
 
 	// Instantiate.
 	acf_new_instance( 'ACF_Admin_Field_Groups' );
+
 endif; // Class exists check.

@@ -33,6 +33,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 				'return_format' => 'value',
 				'layout'        => 'horizontal',
 			);
+
 		}
 
 
@@ -77,6 +78,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 					'label'   => $_label,
 					'checked' => $checked,
 				);
+
 			}
 
 			// maybe select initial value
@@ -112,6 +114,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 
 				// append
 				$html .= acf_get_radio_input( $button );
+
 			}
 
 			// close
@@ -119,6 +122,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 
 			// return
 			echo $html;
+
 		}
 
 
@@ -172,6 +176,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 					),
 				)
 			);
+
 		}
 
 		/**
@@ -255,6 +260,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 		function load_value( $value, $post_id, $field ) {
 
 			return acf_get_field_type( 'radio' )->load_value( $value, $post_id, $field );
+
 		}
 
 
@@ -273,6 +279,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 		function translate_field( $field ) {
 
 			return acf_get_field_type( 'radio' )->translate_field( $field );
+
 		}
 
 
@@ -293,6 +300,7 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 		function format_value( $value, $post_id, $field ) {
 
 			return acf_get_field_type( 'radio' )->format_value( $value, $post_id, $field );
+
 		}
 
 		/**
@@ -318,9 +326,13 @@ if ( ! class_exists( 'acf_field_button_group' ) ) :
 
 			return $schema;
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_button_group' );
+
 endif; // class_exists check
+
+

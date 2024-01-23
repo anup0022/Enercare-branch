@@ -27,6 +27,7 @@ if ( ! class_exists( 'acf_field_output' ) ) :
 			$this->defaults = array(
 				'html' => false,
 			);
+
 		}
 
 
@@ -54,16 +55,24 @@ if ( ! class_exists( 'acf_field_output' ) ) :
 
 			// html
 			if ( is_string( $field['html'] ) && ! function_exists( $field['html'] ) ) {
+
 				echo $field['html'];
 
 				// function
 			} else {
+
 				call_user_func_array( $field['html'], array( $field ) );
+
 			}
+
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_output' );
+
 endif; // class_exists check
+
+

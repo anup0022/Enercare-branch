@@ -258,11 +258,14 @@ if ( ! class_exists( 'acf_field_date_picker' ) ) :
 
 			// save_format - compatibility with ACF < 5.0.0
 			if ( ! empty( $field['save_format'] ) ) {
+
 				return $value;
+
 			}
 
 			// return
 			return acf_format_date( $value, $field['return_format'] );
+
 		}
 
 
@@ -319,11 +322,13 @@ if ( ! class_exists( 'acf_field_date_picker' ) ) :
 
 			return (string) $value;
 		}
+
 	}
 
 
 	// initialize
 	acf_register_field_type( 'acf_field_date_picker' );
+
 endif; // class_exists check
 
 ?>

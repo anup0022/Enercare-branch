@@ -67,6 +67,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// filters
 			add_filter( 'acf/pre_save_post', array( $this, 'pre_save_post' ), 5, 2 );
+
 		}
 
 
@@ -131,6 +132,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// new post?
 			if ( $args['post_id'] === 'new_post' ) {
+
 				$args['new_post'] = wp_parse_args(
 					$args['new_post'],
 					array(
@@ -138,6 +140,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 						'post_status' => 'draft',
 					)
 				);
+
 			}
 
 			// filter
@@ -145,6 +148,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// return
 			return $args;
+
 		}
 
 
@@ -168,6 +172,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// append
 			$this->forms[ $args['id'] ] = $args;
+
 		}
 
 
@@ -193,6 +198,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// return
 			return $this->forms[ $id ];
+
 		}
 
 
@@ -221,13 +227,16 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 				// register
 				acf_add_local_field( $field );
+
 			}
 
 			// honeypot
 			if ( ! empty( $_POST['acf']['_validate_email'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Data not used; presence indicates spam.
 
 				acf_add_validation_error( '', __( 'Spam Detected', 'acf' ) );
+
 			}
+
 		}
 
 
@@ -256,25 +265,32 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 				// update post
 				$save['ID'] = $post_id;
+
 			} elseif ( $post_id == 'new_post' ) {
 
 				// merge in new post data
 				$save = array_merge( $save, $form['new_post'] );
+
 			} else {
 
 				// not post
 				return $post_id;
+
 			}
 
 			// phpcs:disable WordPress.Security.NonceVerification.Missing -- Verified in check_submit_form().
 			// save post_title
 			if ( isset( $_POST['acf']['_post_title'] ) ) {
+
 				$save['post_title'] = acf_extract_var( $_POST['acf'], '_post_title' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized by WP when saved.
+
 			}
 
 			// save post_content
 			if ( isset( $_POST['acf']['_post_content'] ) ) {
+
 				$save['post_content'] = acf_extract_var( $_POST['acf'], '_post_content' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Sanitized by WP when saved.
+
 			}
 			// phpcs:enable WordPress.Security.NonceVerification.Missing
 
@@ -285,18 +301,25 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// validate
 			if ( count( $save ) == 1 ) {
+
 				return $post_id;
+
 			}
 
 			// save
 			if ( $save['ID'] ) {
+
 				wp_update_post( $save );
+
 			} else {
+
 				$post_id = wp_insert_post( $save );
+
 			}
 
 			// return
 			return $post_id;
+
 		}
 
 
@@ -320,6 +343,7 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 
 			// load acf scripts
 			acf_enqueue_scripts();
+
 		}
 
 
@@ -422,7 +446,9 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 				// redirect
 				wp_redirect( $return );
 				exit;
+
 			}
+
 		}
 
 
@@ -567,10 +593,12 @@ if ( ! class_exists( 'acf_form_front' ) ) :
 		</form>
 		<?php endif;
 		}
+
 	}
 
 	// initialize
 	acf()->form_front = new acf_form_front();
+
 endif; // class_exists check
 
 
@@ -591,21 +619,25 @@ endif; // class_exists check
 function acf_form_head() {
 
 	acf()->form_front->enqueue_form();
+
 }
 
 function acf_form( $args = array() ) {
 
 	acf()->form_front->render_form( $args );
+
 }
 
 function acf_get_form( $id = '' ) {
 
 	return acf()->form_front->get_form( $id );
+
 }
 
 function acf_register_form( $args ) {
 
 	acf()->form_front->add_form( $args );
+
 }
 
 ?>
