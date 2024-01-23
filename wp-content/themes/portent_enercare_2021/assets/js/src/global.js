@@ -846,3 +846,13 @@ function createTableCaption() {
 }
 
 window.addEventListener("load", createTableCaption);
+
+jQuery( function( $ ) {
+
+	// Accessibility for search
+	$( window ).on( 'load', function() {
+		$( 'input#wp-block-search__input-1' ).attr( 'title', 'Keywords for a site-wide search' );
+		$( 'input#wp-block-search__input-1' ).attr( 'aria-label', 'Keywords for a site-wide search' );
+	});
+
+});

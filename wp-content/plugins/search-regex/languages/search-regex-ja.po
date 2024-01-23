@@ -7,53 +7,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Search Regex - Development (trunk)\n"
 
-#: build/search-regex.js:17
+#. translators: %searched: number of rows searched and matched %phrases: number
+#. of phrases matched
+#: build/search-regex.js:16
+msgid "matched rows = %(searched)s"
+msgstr ""
+
+#: build/search-regex.js:21
 msgid "OK"
 msgstr "OK"
 
 #. translators: version installed
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Version %s installed! Please read the {{url}}release notes{{/url}} for details."
 msgstr "バージョン%sがインストールされました! 詳細は、{{url}}リリースノート{{/url}}をご覧ください。"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "A problem occurred with your last query. This is likely caused by a combination of search filters that haven't been handled properly."
 msgstr "最後のクエリで問題が発生しました。原因は、検索絞り込みの組み合わせが適切に処理されていないことのようです。"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Query Problem"
 msgstr "クエリの問題"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Progress"
 msgstr "進行状況"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "%s row deleted."
 msgid_plural "%s rows deleted."
 msgstr[0] "%s 行が削除されました。"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Refresh"
 msgstr "更新"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Matched Content"
 msgstr "一致したコンテンツ"
 
-#: build/search-regex.js:14 build/search-regex.js:15
+#: build/search-regex.js:18 build/search-regex.js:19
 msgid "Your search resulted in too many requests. Please narrow your search terms."
 msgstr "検索結果が多すぎます。検索条件を絞り込んでください。"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Your search conditions have changed. Please refresh to see the latest results."
 msgstr "検索条件が変更されました。最新の結果を表示するには、更新してください。"
 
-#: build/search-regex.js:8
+#. translators: matches=number of matched rows, total=total number of rows
+#: build/search-regex.js:10
 msgid "Matched rows: %(matches)s out of %(total)s total."
 msgstr "一致した行: 全 %(total)s個中 %(matches)s 個"
 
@@ -173,7 +180,7 @@ msgstr "エクスポート形式"
 msgid "Run a WordPress action for each matching result."
 msgstr "一致したそれぞれの結果に対して WordPress のアクションを実行。"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Run Action"
 msgstr "アクションを実行"
 
@@ -181,7 +188,7 @@ msgstr "アクションを実行"
 msgid "Delete matching results."
 msgstr "一致結果の記事を削除します。"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Delete Matches"
 msgstr "一致項目を削除"
 
@@ -189,7 +196,7 @@ msgstr "一致項目を削除"
 msgid "Export matching results to JSON, CSV, or SQL."
 msgstr "一致結果を JSON, CSV, SQL でエクスポート"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Export Matches"
 msgstr "一致項目をエクスポート"
 
@@ -904,7 +911,7 @@ msgstr "プリセットはありません"
 msgid "Flags"
 msgstr "フラグ"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Presets"
 msgstr "プリセット"
 
@@ -952,17 +959,11 @@ msgstr "高度"
 msgid "Standard"
 msgstr "標準"
 
-#. translators: %searched: number of rows searched and matched %phrases: number
-#. of phrases matched
-#: build/search-regex.js:12
-msgid "matched rows = %(searched)s, phrases = %(found)s"
-msgstr "一致した行 = %(searched)s、語句 = %(found)s"
-
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Please backup your data before making modifications."
 msgstr "変更を加える前に、データをバックアップすることを強くおすすめします。"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "%s row."
 msgid_plural "%s rows."
 msgstr[0] "%s行。"
@@ -1022,7 +1023,7 @@ msgid "URL"
 msgstr "URL"
 
 #. translators: 1: server PHP version. 2: required PHP version.
-#: search-regex.php:38
+#: search-regex.php:37
 msgid "Disabled! Detected PHP %1$s, need PHP %2$s+"
 msgstr "無効です。PHP %1$s が検出されました。PHP %2$s+ が必要です"
 
@@ -1126,7 +1127,7 @@ msgstr "設定"
 msgid "Action"
 msgstr "操作"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Row ID"
 msgstr "行の ID"
 
@@ -1134,33 +1135,34 @@ msgstr "行の ID"
 msgid "No more matching results found."
 msgstr "これ以上の一致結果はありません。"
 
-#: build/search-regex.js:8
+#: build/search-regex.js:12
 msgid "Last page"
 msgstr "最後のページ"
 
-#: build/search-regex.js:8
+#. translators: current=current page, total=total number of pages
+#: build/search-regex.js:12
 msgid "Page %(current)s of %(total)s"
 msgstr "%(total)s ページ中 %(current)s ページ"
 
-#: build/search-regex.js:8 build/search-regex.js:14
+#: build/search-regex.js:12 build/search-regex.js:18
 msgid "Next page"
 msgstr "次のページ"
 
 #. translators: %current: current percent progress
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Progress %(current)s%%"
 msgstr "進行状況 %(current)s%%"
 
-#: build/search-regex.js:8 build/search-regex.js:12
+#: build/search-regex.js:10
 msgid "Prev page"
 msgstr "前のページ"
 
-#: build/search-regex.js:8 build/search-regex.js:12
+#: build/search-regex.js:10 build/search-regex.js:16
 msgid "First page"
 msgstr "最初のページ"
 
 #. translators: %s: total number of rows searched
-#: build/search-regex.js:10
+#: build/search-regex.js:14
 msgid "%s database row in total"
 msgid_plural "%s database rows in total"
 msgstr[0] "合計 %s データベース行"
@@ -1209,29 +1211,25 @@ msgstr "行の削除"
 msgid "Settings saved"
 msgstr "設定を保存"
 
-#: includes/search-regex-admin.php:301 build/search-regex.js:4
+#: includes/search-regex-admin.php:301
 msgid "{{link}}Source Flags{{/link}} - additional options for the selected source. For example, include post {{guid}}GUID{{/guid}} in the search."
 msgstr "{{link}}検索フラグ{{/link}} - 選択した入力元用の追加のオプションです。たとえば、検索に投稿 {{guid}}GUID{{/guid}} を含めます。"
 
-#: includes/search-regex-admin.php:314 build/search-regex.js:4
+#: includes/search-regex-admin.php:314
 msgid "{{link}}Source{{/link}} - the source of data you wish to search. For example, posts, pages, or comments."
 msgstr "{{link}}入力元{{/link}} - 検索したいデータの入力元です。投稿、ページ、コメントなどです。"
 
-#: includes/search-regex-admin.php:313 build/search-regex.js:4
+#: includes/search-regex-admin.php:313
 msgid "{{link}}Regular expression{{/link}} - a way of defining a pattern for text matching. Provides more advanced matches."
 msgstr "{{link}}正規表現{{/link}} - 文字列一致のパターンを定義する記法です。より高度な検索が可能です。"
 
-#: includes/search-regex-admin.php:312 build/search-regex.js:4
+#: includes/search-regex-admin.php:312
 msgid "{{link}}Search Flags{{/link}} - additional qualifiers for your search, to enable case insensitivity, and to enable regular expression support."
 msgstr "{{link}}検索フラグ{{/link}} - 検索を修飾します。大文字小文字を区別しない、また正規表現の対応を有効にします。"
 
-#: includes/search-regex-admin.php:310 build/search-regex.js:4
+#: includes/search-regex-admin.php:310
 msgid "The following concepts are used by Search Regex:"
 msgstr "Search Regex では以下の概念が採用されています:"
-
-#: build/search-regex.js:4
-msgid "Quick Help"
-msgstr "簡易ヘルプ"
 
 #: build/search-regex.js:4
 msgid "Like this plugin? You might want to consider {{link}}Redirection{{/link}}, a plugin to manage redirects, from the same author."
@@ -1265,7 +1263,7 @@ msgstr "サポートが必要ですか ?"
 msgid "Results"
 msgstr "結果表示数"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Source"
 msgstr "入力"
 
@@ -1273,15 +1271,15 @@ msgstr "入力"
 msgid "Enter search phrase"
 msgstr "検索語句を入力"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Replace All"
 msgstr "すべて置換"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Search"
 msgstr "検索"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Search and replace information in your database."
 msgstr "使用しているデータベースの情報を検索し置換します。"
 
@@ -1349,19 +1347,19 @@ msgstr "キャッシュプラグインまたは CDN サービス (CloudFlare、O
 msgid "Search Regex is not working. Try clearing your browser cache and reloading this page."
 msgstr "Search Regex が機能していません。ブラウザのキャッシュをクリアして、このページをリロードしてみてください。"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "clearing your cache."
 msgstr "キャッシュを削除しています。"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "If you are using a caching system such as Cloudflare then please read this: "
 msgstr "Cloudflare などの CDN キャッシュを使用している場合は、次の項目をお読みください: "
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Please clear your browser cache and reload this page."
 msgstr "ブラウザのキャッシュをクリアして、このページをリロードしてください。"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Cached Search Regex detected"
 msgstr "キャッシュされた正規表現が検出されました"
 
@@ -1448,11 +1446,11 @@ msgstr "すべて表示"
 msgid "Working!"
 msgstr "稼働中"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Finished!"
 msgstr "完了 !"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -1472,15 +1470,15 @@ msgstr "複数行"
 msgid "Single"
 msgstr "単一行"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Support"
 msgstr "ヘルプ"
 
-#: includes/source/core/source-options.php:99 build/search-regex.js:17
+#: includes/source/core/source-options.php:99 build/search-regex.js:21
 msgid "Options"
 msgstr "設定"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Search & Replace"
 msgstr "検索と置換"
 
@@ -1496,7 +1494,7 @@ msgstr "{{link}}一時的に他のプラグインを無効にしてください 
 msgid "{{link}}Caching software{{/link}}, in particular Cloudflare, can cache the wrong thing. Try clearing all your caches."
 msgstr "{{link}}キャッシュのソフトウェア{{/link}}、特に Cloudflare は、間違ったものをキャッシュする可能性があります。一度すべてのキャッシュを削除してみてください。"
 
-#: build/search-regex.js:4 build/search-regex.js:15
+#: build/search-regex.js:4 build/search-regex.js:19
 msgid "What do I do next?"
 msgstr "次はどうしますか？"
 
@@ -1518,11 +1516,11 @@ msgstr "これらの問題の詳細を、実行内容の説明とスクリーン
 
 #: includes/source/core/source-comment.php:168
 #: includes/source/core/source-user.php:155 build/search-regex.js:2
-#: build/search-regex.js:6 build/search-regex.js:15
+#: build/search-regex.js:6 build/search-regex.js:19
 msgid "Email"
 msgstr "メールアドレス"
 
-#: build/search-regex.js:2 build/search-regex.js:6 build/search-regex.js:15
+#: build/search-regex.js:2 build/search-regex.js:6 build/search-regex.js:19
 msgid "Create An Issue"
 msgstr "問題を報告"
 
@@ -1576,6 +1574,6 @@ msgid "https://searchregex.com/"
 msgstr "https://searchregex.com/"
 
 #. Plugin Name of the plugin
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Search Regex"
 msgstr "Search Regex"

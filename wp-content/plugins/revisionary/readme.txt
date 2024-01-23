@@ -6,8 +6,8 @@ Author URI: https://publishpress.com
 Tags: revision, submit changes, duplicate post, duplicate page, revisions, approve changes, scheduled changes
 Requires at least: 5.5
 Requires PHP: 7.2.5
-Tested up to: 6.3
-Stable tag: 3.5.4
+Tested up to: 6.4
+Stable tag: 3.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -238,6 +238,23 @@ Divi is one of the most popular page-builders in WordPress, and it does integrat
 [Click here for more on duplicate posts with Divi (https://publishpress.com/knowledge-base/divi-theme/).
 
 == Changelog ==
+
+= 3.5.6 - 4 Jan 2024 =
+* Feature : New setting Revisions > Settings > Preview > "Modify preview link for better theme compatibility". Some themes require one setting, some require the other.
+* Fixed : ACF - Revision update, preview fails if ACF plugin is active
+* Fixed : Edit Revision - Approve, Submit buttons missing in Gutenberg 17
+* Fixed : PHP 8.2: Warning for dynamic property declaration
+
+= 3.5.5 - 12 Dec 2023 =
+* Compat : Advanced Custom Fields - Prevent invalid filtering of revision ID
+* Fixed : Front page template was not loaded for revision previews of front page
+* Fixed : Revision previews were not loaded correctly on some sites
+* Fixed : Pagination setting on Queue, Archive screens was not stored
+* Fixed : Pagination on Archive screen not applied if Revision Deletion option disabled
+* Fixed : Classic Editor - Revision Status no longer displayed after changing publish time
+* Fixed : Classic Editor - Modified publish time discarded if Submit / Approve clicked before Update Revision
+* Fixed : Classic Editor - Revision Submit button was still (mal)functional when disabled
+* Change : Classic Editor - Separate buttons to Preview changes in progress, View / Approve Saved Revision
 
 = 3.5.4 - 17 Oct 2023 =
 * Fixed : Past Revision previews did not display (since 3.5.3)

@@ -31,6 +31,7 @@ a.editor-post-preview, a.editor-post-preview.components-button.is-large {
 margin-right: 5px;
 }
 
+
 #rvy_compare_button {
 margin: 0 10px 8px 10px;
 }
@@ -48,4 +49,8 @@ box-shadow: inset 0 0 0 1px #6f1b1b;
 
 span.revision-submitting {
 font-weight: bold;
+}
+
+div.edit-post-post-status h2 {
+margin-top: 10px !important;
 }

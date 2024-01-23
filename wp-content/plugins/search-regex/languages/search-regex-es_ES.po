@@ -2,65 +2,72 @@
 # This file is distributed under the same license as the Plugins - Search Regex - Development (trunk) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-27 04:34:08+0000\n"
+"PO-Revision-Date: 2023-10-31 13:58:50+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-alpha.1\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - Search Regex - Development (trunk)\n"
 
-#: build/search-regex.js:17
+#. translators: %searched: number of rows searched and matched %phrases: number
+#. of phrases matched
+#: build/search-regex.js:16
+msgid "matched rows = %(searched)s"
+msgstr "filas coincidentes = %(searched)s"
+
+#: build/search-regex.js:21
 msgid "OK"
-msgstr ""
+msgstr "Aceptar"
 
 #. translators: version installed
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Version %s installed! Please read the {{url}}release notes{{/url}} for details."
-msgstr ""
+msgstr "¡Versión %s instalada! Por favor, lee las {{url}}notas de la versión{{/}} para más detalles."
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "A problem occurred with your last query. This is likely caused by a combination of search filters that haven't been handled properly."
-msgstr ""
+msgstr "Se ha producido un problema con tu última consulta. Es probable que se deba a una combinación de filtros de búsqueda que no se han gestionado correctamente."
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Query Problem"
-msgstr ""
+msgstr "Problema de consulta"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Progress"
-msgstr ""
+msgstr "Progreso"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "%s row deleted."
 msgid_plural "%s rows deleted."
 msgstr[0] ""
 msgstr[1] ""
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Refresh"
-msgstr ""
+msgstr "Recargar"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Matched Content"
-msgstr ""
+msgstr "Contenido coincidente"
 
-#: build/search-regex.js:14 build/search-regex.js:15
+#: build/search-regex.js:18 build/search-regex.js:19
 msgid "Your search resulted in too many requests. Please narrow your search terms."
-msgstr ""
+msgstr "Tu búsqueda ha dado como resultado demasiadas solicitudes. Limita los términos de búsqueda."
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Your search conditions have changed. Please refresh to see the latest results."
-msgstr ""
+msgstr "Tus condiciones de búsqueda han cambiado. Actualiza para ver los últimos resultados."
 
-#: build/search-regex.js:8
+#. translators: matches=number of matched rows, total=total number of rows
+#: build/search-regex.js:10
 msgid "Matched rows: %(matches)s out of %(total)s total."
-msgstr ""
+msgstr "Filas coincidentes: %(matches)s de %(total)s totales."
 
 #: build/search-regex.js:8
 msgid "Delete database row"
-msgstr ""
+msgstr "Borrar fila de la base de datos"
 
 #: build/search-regex.js:8
 msgid "View"
@@ -76,27 +83,27 @@ msgstr "Valor vacío"
 
 #: build/search-regex.js:6
 msgid "No value"
-msgstr ""
+msgstr "Ningún valor"
 
 #: build/search-regex.js:6
 msgid "Click to replace match"
-msgstr ""
+msgstr "Haz clic para sustituir la coincidencia"
 
 #: build/search-regex.js:6
 msgid "Contains encoded data"
-msgstr ""
+msgstr "Contiene datos codificados"
 
 #: build/search-regex.js:6
 msgid "New meta value"
-msgstr ""
+msgstr "Nuevo meta valor"
 
 #: build/search-regex.js:6
 msgid "New meta key"
-msgstr ""
+msgstr "Nueva clave meta"
 
 #: build/search-regex.js:6
 msgid "Apply to matches only"
-msgstr ""
+msgstr "Aplicar sólo a las coincidencias"
 
 #: build/search-regex.js:6
 msgid "Enter replacement"
@@ -172,47 +179,47 @@ msgstr ""
 
 #: build/search-regex.js:6
 msgid "Run a WordPress action for each matching result."
-msgstr ""
+msgstr "Ejecuta una acción de WordPress para cada resultado coincidente."
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Run Action"
-msgstr ""
+msgstr "Ejecutar acción"
 
 #: build/search-regex.js:6
 msgid "Delete matching results."
-msgstr ""
+msgstr "Borrar resultados coincidentes."
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Delete Matches"
-msgstr ""
+msgstr "Borrar coincidencias"
 
 #: build/search-regex.js:6
 msgid "Export matching results to JSON, CSV, or SQL."
-msgstr ""
+msgstr "Exporta los resultados de las coincidencias a JSON, CSV o SQL."
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Export Matches"
-msgstr ""
+msgstr "Exportar coincidencias"
 
 #: build/search-regex.js:6
 msgid "Perform changes to specific values of the matching results."
-msgstr ""
+msgstr "Realiza cambios en valores específicos de los resultados de la concordancia."
 
 #: build/search-regex.js:6
 msgid "Modify Matches"
-msgstr ""
+msgstr "Modificar coincidencias"
 
 #: build/search-regex.js:6
 msgid "Replace the global search values."
-msgstr ""
+msgstr "Sustituye los valores de la búsqueda global."
 
 #: build/search-regex.js:6
 msgid "Global Text Replace"
-msgstr ""
+msgstr "Sustitución global de texto"
 
 #: build/search-regex.js:6
 msgid "Just show matching results."
-msgstr ""
+msgstr "Sólo muestra resultados coincidentes."
 
 #: build/search-regex.js:6
 msgid "No action"
@@ -220,16 +227,16 @@ msgstr "Ninguna acción"
 
 #: build/search-regex.js:6
 msgid "Enter replacement value"
-msgstr ""
+msgstr "Introduce el valor de sustitución"
 
 #: build/search-regex.js:6
 msgid "Matched values will be removed"
-msgstr ""
+msgstr "Se eliminarán los valores coincidentes"
 
 #. translators: text to replace
 #: build/search-regex.js:6
 msgid "Replace \"%1s\""
-msgstr ""
+msgstr "Sustituye \"%1s\""
 
 #: build/search-regex.js:4
 msgid "Year"
@@ -269,11 +276,11 @@ msgstr "Aumentar"
 
 #: build/search-regex.js:4
 msgid "Set Value"
-msgstr ""
+msgstr "Establece el valor"
 
 #: build/search-regex.js:4
 msgid "Replace With"
-msgstr ""
+msgstr "Reemplazar por"
 
 #: build/search-regex.js:4 build/search-regex.js:6
 msgid "Add"
@@ -353,27 +360,27 @@ msgstr ""
 
 #: build/search-regex.js:4
 msgid "Greater"
-msgstr ""
+msgstr "Mayor que"
 
 #: build/search-regex.js:4
 msgid "Not Equals"
-msgstr ""
+msgstr "No iguales"
 
 #: build/search-regex.js:4
 msgid "Equals"
-msgstr ""
+msgstr "Iguales"
 
 #: build/search-regex.js:4
 msgid "Optional global search phrase. Leave blank to use filters only."
-msgstr ""
+msgstr "Frase de búsqueda global opcional. Déjala en blanco para utilizar sólo filtros."
 
 #: build/search-regex.js:2
 msgid "REST API 404"
-msgstr ""
+msgstr "404 de la API REST"
 
 #: build/search-regex.js:2
 msgid "Your REST API appears to be cached and this will cause problems. Please exclude your REST API from your caching system."
-msgstr ""
+msgstr "Tu API REST parece estar cacheada y esto provocará problemas. Por favor, excluye tu API REST de tu sistema de caché."
 
 #: build/search-regex.js:2
 msgid "Your REST API is showing a deprecated PHP error. Please fix this error."
@@ -421,66 +428,66 @@ msgstr ""
 
 #: includes/source/plugin/source-redirection.php:487
 msgid "Module"
-msgstr ""
+msgstr "Módulo"
 
 #: includes/source/plugin/source-redirection.php:468
 msgid "Redirection Groups"
-msgstr ""
+msgstr "Grupos de redireccionamiento"
 
 #: includes/source/plugin/source-redirection.php:347
 msgid "Not accessed"
-msgstr ""
+msgstr "No se ha accedido"
 
 #: includes/source/plugin/source-redirection.php:232
 msgid "Target"
-msgstr ""
+msgstr "Objetivo"
 
 #: includes/source/plugin/source-redirection.php:208
 msgid "HTTP Code"
-msgstr ""
+msgstr "Código HTTP"
 
 #: includes/source/plugin/source-redirection.php:203
 msgid "Position"
-msgstr ""
+msgstr "Posición"
 
 #: includes/source/plugin/source-redirection.php:196
 #: includes/source/plugin/source-redirection.php:514
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: includes/source/plugin/source-redirection.php:192
 #: includes/source/plugin/source-redirection.php:510
 msgid "Enabled"
-msgstr ""
+msgstr "Activado"
 
 #: includes/source/plugin/source-redirection.php:188
 #: includes/source/plugin/source-redirection.php:506
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: includes/source/plugin/source-redirection.php:181
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: includes/source/plugin/source-redirection.php:176
 msgid "Last Access"
-msgstr ""
+msgstr "Último acceso"
 
 #: includes/source/plugin/source-redirection.php:171
 msgid "Hit Count"
-msgstr ""
+msgstr "Contador de aciertos"
 
 #: includes/source/plugin/source-redirection.php:164
 msgid "Source URL (matching)"
-msgstr ""
+msgstr "URL de origen (coincidente)"
 
 #: includes/source/plugin/source-redirection.php:157
 msgid "Source URL"
-msgstr ""
+msgstr "URL de la fuente"
 
 #: includes/source/core/source-user.php:174
 msgid "User meta"
-msgstr ""
+msgstr "Meta del usuario"
 
 #: includes/source/core/source-user.php:168
 msgid "Registered"
@@ -545,19 +552,19 @@ msgstr ""
 #: includes/source/core/source-post.php:316
 #: includes/source/core/source-post.php:332
 msgid "Open"
-msgstr ""
+msgstr "Abierto"
 
 #: includes/source/core/source-post.php:308
 msgid "Post Status"
-msgstr ""
+msgstr "Estado de publicación"
 
 #: includes/source/core/source-post.php:268
 msgid "Post Type"
-msgstr ""
+msgstr "Tipo de contenido"
 
 #: includes/source/core/source-options.php:136
 msgid "Autoload"
-msgstr ""
+msgstr "Carga automática"
 
 #: includes/source/core/source-options.php:133
 msgid "Is not autoload"
@@ -570,24 +577,24 @@ msgstr ""
 #: includes/source/core/source-meta.php:126 build/search-regex.js:4
 #: build/search-regex.js:6
 msgid "Meta Value"
-msgstr ""
+msgstr "Valor meta"
 
 #: includes/source/core/source-meta.php:119 build/search-regex.js:4
 #: build/search-regex.js:6
 msgid "Meta Key"
-msgstr ""
+msgstr "Clave meta"
 
 #: includes/source/core/source-meta.php:112
 msgid "Owner ID"
-msgstr ""
+msgstr "ID de propietario"
 
 #: includes/source/core/source-comment.php:262
 msgid "Comment meta"
-msgstr ""
+msgstr "Comentario meta"
 
 #: includes/source/core/source-comment.php:254
 msgid "User ID"
-msgstr ""
+msgstr "ID de usuario"
 
 #: includes/source/core/source-comment.php:248
 msgid "Parent Comment"
@@ -595,58 +602,58 @@ msgstr ""
 
 #: includes/source/core/source-comment.php:237
 msgid "Trackback"
-msgstr ""
+msgstr "Trackback"
 
 #: includes/source/core/source-comment.php:233
 msgid "Pingback"
-msgstr ""
+msgstr "Pingback"
 
 #: includes/source/core/source-comment.php:229
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: includes/source/core/source-comment.php:224
 msgid "User Agent"
-msgstr ""
+msgstr "Agente de usuario"
 
 #: includes/source/core/source-comment.php:219
 msgid "Approval Status"
-msgstr ""
+msgstr "Estado de aprobación"
 
 #: includes/source/core/source-comment.php:216
 msgid "Spam"
-msgstr ""
+msgstr "Spam"
 
 #: includes/source/core/source-comment.php:212
 msgid "Approved"
-msgstr ""
+msgstr "Aprobado"
 
 #: includes/source/core/source-comment.php:208
 msgid "Unapproved"
-msgstr ""
+msgstr "Rechazado"
 
 #: includes/source/core/source-comment.php:199
 #: includes/source/core/source-post.php:295
 msgid "Date GMT"
-msgstr ""
+msgstr "Fecha GMT"
 
 #: includes/source/core/source-comment.php:193
 #: includes/source/core/source-post.php:289
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: includes/source/core/source-comment.php:188
 msgid "IP"
-msgstr ""
+msgstr "IP"
 
 #: includes/source/core/source-comment.php:161
 #: includes/source/core/source-post.php:282
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: includes/source/core/source-comment.php:154
 msgid "Post ID"
-msgstr ""
+msgstr "ID de entrada"
 
 #: includes/source/core/source-comment.php:148
 #: includes/source/core/source-options.php:105
@@ -656,12 +663,12 @@ msgstr ""
 #: includes/source/plugin/source-redirection.php:151
 #: includes/source/plugin/source-redirection.php:474
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: includes/source/class-manager.php:76
 #: includes/source/core/source-terms.php:108
 msgid "Terms"
-msgstr ""
+msgstr "Términos"
 
 #: includes/source/class-manager.php:22
 #: includes/source/core/source-post.php:239
@@ -906,7 +913,7 @@ msgstr "No hay preajustes"
 msgid "Flags"
 msgstr "Etiquetas"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Presets"
 msgstr "Preajustes"
 
@@ -954,17 +961,11 @@ msgstr "Avanzado"
 msgid "Standard"
 msgstr "Estándar"
 
-#. translators: %searched: number of rows searched and matched %phrases: number
-#. of phrases matched
-#: build/search-regex.js:12
-msgid "matched rows = %(searched)s, phrases = %(found)s"
-msgstr "filas coincidentes = %(searched)s, frases = %(found)s"
-
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Please backup your data before making modifications."
 msgstr "Por favor, haz una copia de seguridad de sus datos antes de realizar modificaciones."
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "%s row."
 msgid_plural "%s rows."
 msgstr[0] "%s fila."
@@ -1025,7 +1026,7 @@ msgid "URL"
 msgstr "URL"
 
 #. translators: 1: server PHP version. 2: required PHP version.
-#: search-regex.php:38
+#: search-regex.php:37
 msgid "Disabled! Detected PHP %1$s, need PHP %2$s+"
 msgstr "¡Desactivado! Detectado PHP %1$s, se necesita PHP %2$s o superior"
 
@@ -1129,7 +1130,7 @@ msgstr "Ajustes"
 msgid "Action"
 msgstr ""
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Row ID"
 msgstr "ID de fila"
 
@@ -1137,33 +1138,34 @@ msgstr "ID de fila"
 msgid "No more matching results found."
 msgstr "No se encontraron más resultados coincidentes."
 
-#: build/search-regex.js:8
+#: build/search-regex.js:12
 msgid "Last page"
 msgstr "Última página"
 
-#: build/search-regex.js:8
+#. translators: current=current page, total=total number of pages
+#: build/search-regex.js:12
 msgid "Page %(current)s of %(total)s"
 msgstr "Página %(current)s de %(total)s"
 
-#: build/search-regex.js:8 build/search-regex.js:14
+#: build/search-regex.js:12 build/search-regex.js:18
 msgid "Next page"
 msgstr "Página siguiente"
 
 #. translators: %current: current percent progress
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Progress %(current)s%%"
 msgstr ""
 
-#: build/search-regex.js:8 build/search-regex.js:12
+#: build/search-regex.js:10
 msgid "Prev page"
 msgstr "Página anterior"
 
-#: build/search-regex.js:8 build/search-regex.js:12
+#: build/search-regex.js:10 build/search-regex.js:16
 msgid "First page"
 msgstr "Primera página"
 
 #. translators: %s: total number of rows searched
-#: build/search-regex.js:10
+#: build/search-regex.js:14
 msgid "%s database row in total"
 msgid_plural "%s database rows in total"
 msgstr[0] "%s fila de la base de datos en total"
@@ -1213,29 +1215,25 @@ msgstr "Fila borrada"
 msgid "Settings saved"
 msgstr "Ajustes guardados"
 
-#: includes/search-regex-admin.php:301 build/search-regex.js:4
+#: includes/search-regex-admin.php:301
 msgid "{{link}}Source Flags{{/link}} - additional options for the selected source. For example, include post {{guid}}GUID{{/guid}} in the search."
 msgstr "{{link}}Banderas de búsqueda{{/link}} - añade opciones para seleccionar el origin. Por ejemplo, incluye la entrada {{guid}}GUID{{/guid}} en la búsqueda."
 
-#: includes/search-regex-admin.php:314 build/search-regex.js:4
+#: includes/search-regex-admin.php:314
 msgid "{{link}}Source{{/link}} - the source of data you wish to search. For example, posts, pages, or comments."
 msgstr ""
 
-#: includes/search-regex-admin.php:313 build/search-regex.js:4
+#: includes/search-regex-admin.php:313
 msgid "{{link}}Regular expression{{/link}} - a way of defining a pattern for text matching. Provides more advanced matches."
 msgstr "{{link}}Expresión regular{{/link}} - una forma de definir un patrón para la coincidencia de texto. Proporciona coincidencias más avanzadas."
 
-#: includes/search-regex-admin.php:312 build/search-regex.js:4
+#: includes/search-regex-admin.php:312
 msgid "{{link}}Search Flags{{/link}} - additional qualifiers for your search, to enable case insensitivity, and to enable regular expression support."
 msgstr "{{link}}Banderas de búsqueda{{/link}} - añade calificadores adicionales a tu búsqueda, para activar sensibilidad de mayúsculas y minúsculas, y el soporte de expresiones regulares."
 
-#: includes/search-regex-admin.php:310 build/search-regex.js:4
+#: includes/search-regex-admin.php:310
 msgid "The following concepts are used by Search Regex:"
 msgstr "Search Regex utiliza los siguientes conceptos:"
-
-#: build/search-regex.js:4
-msgid "Quick Help"
-msgstr "Ayuda rápida"
 
 #: build/search-regex.js:4
 msgid "Like this plugin? You might want to consider {{link}}Redirection{{/link}}, a plugin to manage redirects, from the same author."
@@ -1247,15 +1245,15 @@ msgstr "Redirección"
 
 #: build/search-regex.js:4
 msgid "If you want to submit information that you don't want in a public repository then send it directly via {{email}}email{{/email}} - include as much information as you can!"
-msgstr ""
+msgstr "Si quieres enviar información que no quieres que aparezca en un repositorio público, envíala directamente por {{email}}email{/email}} - ¡incluye toda la información que puedas!"
 
 #: build/search-regex.js:4
 msgid "Please note that any support is provide on as-time-is-available basis and is not guaranteed. I do not provide paid support."
-msgstr ""
+msgstr "Ten en cuenta que la asistencia se presta en función del tiempo disponible y no está garantizada. No ofrezco asistencia de pago."
 
 #: build/search-regex.js:4
 msgid "If you want to report a bug please read the {{report}}Reporting Bugs{{/report}} guide."
-msgstr ""
+msgstr "Si quieres informar de un error, lee la guía {{report}}Informar de errores{{/report}}."
 
 #: build/search-regex.js:4
 msgid "Full documentation for Search Regex can be found at {{site}}https://searchregex.com{{/site}}."
@@ -1269,7 +1267,7 @@ msgstr "¿Necesitas más ayuda?"
 msgid "Results"
 msgstr "Resultados"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Source"
 msgstr "Fuente"
 
@@ -1277,15 +1275,15 @@ msgstr "Fuente"
 msgid "Enter search phrase"
 msgstr "Introduce la frase a buscar"
 
-#: build/search-regex.js:14
+#: build/search-regex.js:18
 msgid "Replace All"
 msgstr "Reemplazar todo"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Search"
 msgstr "Buscar"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Search and replace information in your database."
 msgstr "Busca y reemplaza la información en tu base de datos."
 
@@ -1331,7 +1329,7 @@ msgstr "Tú obtienes un software útil y yo sigo mejorándolo."
 
 #: build/search-regex.js:4
 msgid "Search Regex is free to use - life is wonderful and lovely! It has required a great deal of time and effort to develop and you can help support this development by {{strong}}making a small donation{{/strong}}."
-msgstr ""
+msgstr "«Search Regex» es de uso gratuito - ¡La vida es maravillosa y encantadora! Su desarrollo ha requerido una gran cantidad de tiempo y esfuerzo, y puedes contribuir a él haciendo {{strong}}una pequeña donación{{/strong}}."
 
 #: build/search-regex.js:4
 msgid "I'd like to support some more."
@@ -1353,19 +1351,19 @@ msgstr ""
 msgid "Search Regex is not working. Try clearing your browser cache and reloading this page."
 msgstr "Search Regex no está funcionando. Prueba a vaciar la caché de tu navegador y recargar esta página."
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "clearing your cache."
 msgstr "vaciando su caché."
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "If you are using a caching system such as Cloudflare then please read this: "
-msgstr ""
+msgstr "Si utilizas un sistema de almacenamiento en caché como Cloudflare, lee esto: "
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Please clear your browser cache and reload this page."
-msgstr ""
+msgstr "Por favor, borra la caché de tu navegador y vuelve a cargar esta página."
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Cached Search Regex detected"
 msgstr "Se ha detectado Search Regex en la caché"
 
@@ -1395,7 +1393,7 @@ msgstr "Comprobar de nuevo"
 #. translators: test percent
 #: build/search-regex.js:4
 msgid "Testing - %s%%"
-msgstr ""
+msgstr "Probando - %s%%"
 
 #: build/search-regex.js:2
 msgid "Show Problems"
@@ -1407,15 +1405,15 @@ msgstr "Resumen"
 
 #: build/search-regex.js:2
 msgid "You are using a broken REST API route. Changing to a working API should fix the problem."
-msgstr ""
+msgstr "Estás utilizando una ruta de la API REST que no funciona. Cambiar a una API que funcione debería solucionar el problema."
 
 #: build/search-regex.js:2
 msgid "Your REST API is not working and the plugin will not be able to continue until this is fixed."
-msgstr ""
+msgstr "Tu API REST no funciona y el plugin no podrá continuar hasta que esto se solucione."
 
 #: build/search-regex.js:2
 msgid "There are some problems connecting to your REST API. It is not necessary to fix these problems and the plugin is able to work."
-msgstr ""
+msgstr "Hay algunos problemas de conexión a tu API REST. No es necesario solucionar estos problemas y el plugin podrá funcionar."
 
 #: build/search-regex.js:2
 msgid "Unavailable"
@@ -1453,11 +1451,11 @@ msgstr "Mostrar todo"
 msgid "Working!"
 msgstr "¡Funcionando!"
 
-#: build/search-regex.js:15
+#: build/search-regex.js:19
 msgid "Finished!"
 msgstr "¡Finalizado!"
 
-#: build/search-regex.js:6 build/search-regex.js:14
+#: build/search-regex.js:6 build/search-regex.js:18
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -1477,15 +1475,15 @@ msgstr "Multi"
 msgid "Single"
 msgstr "Individual"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Support"
 msgstr "Soporte"
 
-#: includes/source/core/source-options.php:99 build/search-regex.js:17
+#: includes/source/core/source-options.php:99 build/search-regex.js:21
 msgid "Options"
 msgstr "Opciones"
 
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Search & Replace"
 msgstr "Buscar y reemplazar"
 
@@ -1495,13 +1493,13 @@ msgstr "Si estás usando WordPress 5.2 o superior, revisa la {{link}}salud del s
 
 #: build/search-regex.js:4
 msgid "{{link}}Please temporarily disable other plugins!{{/link}} This fixes so many problems."
-msgstr ""
+msgstr "{{link}}¡Desactiva temporalmente otros plugins!{{/link}} Esto soluciona muchos problemas."
 
 #: build/search-regex.js:4
 msgid "{{link}}Caching software{{/link}}, in particular Cloudflare, can cache the wrong thing. Try clearing all your caches."
 msgstr "{{link}}El software de almacenamiento en caché{/link}}, en particular Cloudflare, puede almacenar en caché algo incorrecto. Prueba a borrar todas las cachés."
 
-#: build/search-regex.js:4 build/search-regex.js:15
+#: build/search-regex.js:4 build/search-regex.js:19
 msgid "What do I do next?"
 msgstr "¿Qué hago ahora?"
 
@@ -1523,18 +1521,18 @@ msgstr "Incluye estos detalles en tu informe junto con una descripción de lo qu
 
 #: includes/source/core/source-comment.php:168
 #: includes/source/core/source-user.php:155 build/search-regex.js:2
-#: build/search-regex.js:6 build/search-regex.js:15
+#: build/search-regex.js:6 build/search-regex.js:19
 msgid "Email"
 msgstr "Correo eletrónico"
 
-#: build/search-regex.js:2 build/search-regex.js:6 build/search-regex.js:15
+#: build/search-regex.js:2 build/search-regex.js:6 build/search-regex.js:19
 msgid "Create An Issue"
 msgstr "Crear una incidencia"
 
 #: includes/source/core/source-post.php:320
 #: includes/source/core/source-post.php:336
 msgid "Closed"
-msgstr ""
+msgstr "Cerrada"
 
 #: build/search-regex.js:6
 msgid "Save"
@@ -1581,6 +1579,6 @@ msgid "https://searchregex.com/"
 msgstr "https://searchregex.com/"
 
 #. Plugin Name of the plugin
-#: build/search-regex.js:17
+#: build/search-regex.js:21
 msgid "Search Regex"
 msgstr "Search Regex"

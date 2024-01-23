@@ -52,6 +52,22 @@ class Area extends Block {
 
 		$vars = array();
 
+		if ( ! isset( $attributes[ 'column' ][ 'start' ] ) ) {
+			$attributes[ 'column' ][ 'start' ] = 1;
+		}
+
+		if ( ! isset( $attributes[ 'column' ][ 'end' ] ) ) {
+			$attributes[ 'column' ][ 'end' ] = 1;
+		}
+
+		if ( ! isset( $attributes[ 'row' ][ 'start' ] ) ) {
+			$attributes[ 'row' ][ 'start' ] = 1;
+		}
+
+		if ( ! isset( $attributes[ 'row' ][ 'end' ] ) ) {
+			$attributes[ 'row' ][ 'end' ] = 1;
+		}
+
 		$vars[] = '--_ga-column:' . $attributes[ 'column' ][ 'start' ] . '/' . ($attributes[ 'column' ][ 'end' ] + 1);
 		$vars[] = '--_ga-row:' . $attributes[ 'row' ][ 'start' ] . '/' . ($attributes[ 'row' ][ 'end' ] + 1);
 

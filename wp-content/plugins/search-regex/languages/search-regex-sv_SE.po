@@ -1,0 +1,1584 @@
+# Translation of Plugins - Search Regex - Development (trunk) in Swedish
+# This file is distributed under the same license as the Plugins - Search Regex - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-01 19:23:02+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Search Regex - Development (trunk)\n"
+
+#. translators: %searched: number of rows searched and matched %phrases: number
+#. of phrases matched
+#: build/search-regex.js:16
+msgid "matched rows = %(searched)s"
+msgstr ""
+
+#: build/search-regex.js:21
+msgid "OK"
+msgstr "OK"
+
+#. translators: version installed
+#: build/search-regex.js:21
+msgid "Version %s installed! Please read the {{url}}release notes{{/url}} for details."
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "A problem occurred with your last query. This is likely caused by a combination of search filters that haven't been handled properly."
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "Query Problem"
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "Progress"
+msgstr "Förlopp"
+
+#: build/search-regex.js:18
+msgid "%s row deleted."
+msgid_plural "%s rows deleted."
+msgstr[0] "%s rad borttagen."
+msgstr[1] "%s rader borttagna."
+
+#: build/search-regex.js:18
+msgid "Refresh"
+msgstr "Uppdatera"
+
+#: build/search-regex.js:18
+msgid "Matched Content"
+msgstr "Matchat innehåll"
+
+#: build/search-regex.js:18 build/search-regex.js:19
+msgid "Your search resulted in too many requests. Please narrow your search terms."
+msgstr ""
+
+#: build/search-regex.js:18
+msgid "Your search conditions have changed. Please refresh to see the latest results."
+msgstr ""
+
+#. translators: matches=number of matched rows, total=total number of rows
+#: build/search-regex.js:10
+msgid "Matched rows: %(matches)s out of %(total)s total."
+msgstr ""
+
+#: build/search-regex.js:8
+msgid "Delete database row"
+msgstr "Ta bort databasrad"
+
+#: build/search-regex.js:8
+msgid "View"
+msgstr "Visa"
+
+#: build/search-regex.js:8
+msgid "No title"
+msgstr "Ingen rubrik"
+
+#: build/search-regex.js:6
+msgid "Empty value"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "No value"
+msgstr "Inget värde"
+
+#: build/search-regex.js:6
+msgid "Click to replace match"
+msgstr "Klicka för att ersätta matchning"
+
+#: build/search-regex.js:6
+msgid "Contains encoded data"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "New meta value"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "New meta key"
+msgstr "Ny metanyckel"
+
+#: build/search-regex.js:6
+msgid "Apply to matches only"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Enter replacement"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Click to replace column"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "This column contains special formatting. Modifying it could break the format."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "HTML"
+msgstr "HTML"
+
+#: build/search-regex.js:6
+msgid "Blocks"
+msgstr "Block"
+
+#: build/search-regex.js:6
+msgid "Serialized PHP"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Paste preset JSON."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Global Search Flags"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Global Replace"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Global Search"
+msgstr "Global sökning"
+
+#: build/search-regex.js:6
+msgid "View Columns"
+msgstr "Visa kolumner"
+
+#: build/search-regex.js:6
+msgid "Sources"
+msgstr "Källor"
+
+#: build/search-regex.js:6
+msgid "Only include selected columns"
+msgstr "Inkludera endast valda kolumner"
+
+#: build/search-regex.js:6
+msgid "WordPress Action"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "SQL"
+msgstr "SQL"
+
+#: build/search-regex.js:6
+msgid "CSV"
+msgstr "CSV"
+
+#: build/search-regex.js:6
+msgid "JSON"
+msgstr "JSON"
+
+#: build/search-regex.js:6
+msgid "Export Format"
+msgstr "Exporteringsformat"
+
+#: build/search-regex.js:6
+msgid "Run a WordPress action for each matching result."
+msgstr ""
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Run Action"
+msgstr "Kör åtgärd"
+
+#: build/search-regex.js:6
+msgid "Delete matching results."
+msgstr "Ta bort matchande resultat."
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Delete Matches"
+msgstr "Ta bort matchningar"
+
+#: build/search-regex.js:6
+msgid "Export matching results to JSON, CSV, or SQL."
+msgstr "Exportera matchande resultat till JSON, CSV eller SQL."
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Export Matches"
+msgstr "Exportera matchningar"
+
+#: build/search-regex.js:6
+msgid "Perform changes to specific values of the matching results."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Modify Matches"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Replace the global search values."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Global Text Replace"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Just show matching results."
+msgstr "Visar endast matchande resultat."
+
+#: build/search-regex.js:6
+msgid "No action"
+msgstr "Ingen åtgärd"
+
+#: build/search-regex.js:6
+msgid "Enter replacement value"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Matched values will be removed"
+msgstr ""
+
+#. translators: text to replace
+#: build/search-regex.js:6
+msgid "Replace \"%1s\""
+msgstr "Ersätt ”%1s”"
+
+#: build/search-regex.js:4
+msgid "Year"
+msgstr "År"
+
+#: build/search-regex.js:4
+msgid "Months"
+msgstr "Månader"
+
+#: build/search-regex.js:4
+msgid "Weeks"
+msgstr "Veckor"
+
+#: build/search-regex.js:4
+msgid "Days"
+msgstr "Dagar"
+
+#: build/search-regex.js:4
+msgid "Hours"
+msgstr "Timmar"
+
+#: build/search-regex.js:4
+msgid "Minutes"
+msgstr "Minuter"
+
+#: build/search-regex.js:4
+msgid "Seconds"
+msgstr "Sekunder"
+
+#: build/search-regex.js:4
+msgid "Decrement"
+msgstr "Minskning"
+
+#: build/search-regex.js:4
+msgid "Increment"
+msgstr "Ökning"
+
+#: build/search-regex.js:4
+msgid "Set Value"
+msgstr "Ställ in värde"
+
+#: build/search-regex.js:4
+msgid "Replace With"
+msgstr "Ersätt med"
+
+#: build/search-regex.js:4 build/search-regex.js:6
+msgid "Add"
+msgstr "Lägg till"
+
+#: build/search-regex.js:4
+msgid "Column"
+msgstr "Kolumn"
+
+#: build/search-regex.js:4
+msgid "AND"
+msgstr "OCH"
+
+#: build/search-regex.js:4 build/search-regex.js:6
+msgid "Filters"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Add sub-filter (OR)"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "OR"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "All"
+msgstr "Alla"
+
+#: build/search-regex.js:4
+msgid "between {{first/}} and {{second/}}"
+msgstr "mellan {{first/}} och {{second/}}"
+
+#: build/search-regex.js:4
+msgid "No Owner"
+msgstr "Ingen ägare"
+
+#: build/search-regex.js:4
+msgid "Has Owner"
+msgstr "Har ägare"
+
+#: build/search-regex.js:4
+msgid "Any"
+msgstr "Valfri"
+
+#: build/search-regex.js:4
+msgid "Excludes any"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Includes any"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "End"
+msgstr "Slut"
+
+#: build/search-regex.js:4
+msgid "Begins"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Not contains"
+msgstr "Innehåller inte"
+
+#: build/search-regex.js:4
+msgid "Contains"
+msgstr "Innehåller"
+
+#: build/search-regex.js:4
+msgid "Range"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Less"
+msgstr "Mindre"
+
+#: build/search-regex.js:4
+msgid "Greater"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Not Equals"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Equals"
+msgstr "Lika"
+
+#: build/search-regex.js:4
+msgid "Optional global search phrase. Leave blank to use filters only."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "REST API 404"
+msgstr "REST API 404"
+
+#: build/search-regex.js:2
+msgid "Your REST API appears to be cached and this will cause problems. Please exclude your REST API from your caching system."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Your REST API is showing a deprecated PHP error. Please fix this error."
+msgstr "Ditt REST API visar ett föråldrat PHP-fel. Åtgärda detta fel."
+
+#: build/search-regex.js:2
+msgid "Your server configuration is blocking access to the REST API."
+msgstr "Din serverkonfiguration blockerar åtkomst till REST API:et."
+
+#: build/search-regex.js:2
+msgid "Can you access your {{api}}REST API{{/api}} without it redirecting?."
+msgstr "Kan du få åtkomst till ditt {{api}}REST API{{/api}} utan att det omdirigerar?"
+
+#: build/search-regex.js:2
+msgid "You will will need to fix this on your site. Redirection is not causing the error."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Preset uploaded"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Multiline"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Case"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Regex"
+msgstr "Regex"
+
+#: includes/source/plugin/source-redirection.php:499
+msgid "Nginx"
+msgstr "Nginx"
+
+#: includes/source/plugin/source-redirection.php:495
+msgid "Apache"
+msgstr "Apache"
+
+#: includes/source/plugin/source-redirection.php:491
+msgid "WordPress"
+msgstr "WordPress"
+
+#: includes/source/plugin/source-redirection.php:487
+msgid "Module"
+msgstr "Modul"
+
+#: includes/source/plugin/source-redirection.php:468
+msgid "Redirection Groups"
+msgstr ""
+
+#: includes/source/plugin/source-redirection.php:347
+msgid "Not accessed"
+msgstr ""
+
+#: includes/source/plugin/source-redirection.php:232
+msgid "Target"
+msgstr "Mål"
+
+#: includes/source/plugin/source-redirection.php:208
+msgid "HTTP Code"
+msgstr "HTTP-kod"
+
+#: includes/source/plugin/source-redirection.php:203
+msgid "Position"
+msgstr "Position"
+
+#: includes/source/plugin/source-redirection.php:196
+#: includes/source/plugin/source-redirection.php:514
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: includes/source/plugin/source-redirection.php:192
+#: includes/source/plugin/source-redirection.php:510
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: includes/source/plugin/source-redirection.php:188
+#: includes/source/plugin/source-redirection.php:506
+msgid "Status"
+msgstr "Status"
+
+#: includes/source/plugin/source-redirection.php:181
+msgid "Group"
+msgstr "Grupp"
+
+#: includes/source/plugin/source-redirection.php:176
+msgid "Last Access"
+msgstr ""
+
+#: includes/source/plugin/source-redirection.php:171
+msgid "Hit Count"
+msgstr ""
+
+#: includes/source/plugin/source-redirection.php:164
+msgid "Source URL (matching)"
+msgstr "Käll-URL (matchar)"
+
+#: includes/source/plugin/source-redirection.php:157
+msgid "Source URL"
+msgstr "Käll-URL"
+
+#: includes/source/core/source-user.php:174
+msgid "User meta"
+msgstr ""
+
+#: includes/source/core/source-user.php:168
+msgid "Registered"
+msgstr "Registrerad"
+
+#: includes/source/core/source-user.php:134
+msgid "Login"
+msgstr "Logga in"
+
+#: includes/source/core/source-terms.php:135
+msgid "Taxonomy"
+msgstr "Taxonomi"
+
+#: includes/source/core/source-post.php:411
+msgid "Post Tag"
+msgstr "Inläggsetikett"
+
+#: includes/source/core/source-post.php:402
+msgid "Post Category"
+msgstr "Inläggskategori"
+
+#: includes/source/core/source-post.php:396
+msgid "Comment Count"
+msgstr "Antal kommentarer"
+
+#: includes/source/core/source-post.php:389
+msgid "MIME"
+msgstr "MIME"
+
+#: includes/source/core/source-post.php:374
+msgid "Parent"
+msgstr "Överordnad"
+
+#: includes/source/core/source-post.php:368
+msgid "Modified GMT"
+msgstr ""
+
+#: includes/source/core/source-post.php:362
+msgid "Modified"
+msgstr "Modifierad"
+
+#: includes/source/core/source-post.php:355
+msgid "Password"
+msgstr "Lösenord"
+
+#: includes/source/core/source-post.php:352
+msgid "Has no password"
+msgstr "Har inget lösenord"
+
+#: includes/source/core/source-post.php:348
+msgid "Has password"
+msgstr "Har lösenord"
+
+#: includes/source/core/source-post.php:339
+msgid "Ping Status"
+msgstr "Ping-status"
+
+#: includes/source/core/source-post.php:323
+msgid "Comment Status"
+msgstr "Kommentarsstatus"
+
+#: includes/source/core/source-post.php:316
+#: includes/source/core/source-post.php:332
+msgid "Open"
+msgstr "Öppet"
+
+#: includes/source/core/source-post.php:308
+msgid "Post Status"
+msgstr "Inläggsstatus"
+
+#: includes/source/core/source-post.php:268
+msgid "Post Type"
+msgstr "Inläggstyp"
+
+#: includes/source/core/source-options.php:136
+msgid "Autoload"
+msgstr ""
+
+#: includes/source/core/source-options.php:133
+msgid "Is not autoload"
+msgstr ""
+
+#: includes/source/core/source-options.php:129
+msgid "Is autoload"
+msgstr ""
+
+#: includes/source/core/source-meta.php:126 build/search-regex.js:4
+#: build/search-regex.js:6
+msgid "Meta Value"
+msgstr "Meta-värde"
+
+#: includes/source/core/source-meta.php:119 build/search-regex.js:4
+#: build/search-regex.js:6
+msgid "Meta Key"
+msgstr "Metanyckel"
+
+#: includes/source/core/source-meta.php:112
+msgid "Owner ID"
+msgstr "Ägar-ID"
+
+#: includes/source/core/source-comment.php:262
+msgid "Comment meta"
+msgstr "Metadata för kommentar"
+
+#: includes/source/core/source-comment.php:254
+msgid "User ID"
+msgstr "Användar-ID"
+
+#: includes/source/core/source-comment.php:248
+msgid "Parent Comment"
+msgstr "Överordnad kommentar"
+
+#: includes/source/core/source-comment.php:237
+msgid "Trackback"
+msgstr "Trackback"
+
+#: includes/source/core/source-comment.php:233
+msgid "Pingback"
+msgstr "Pingback"
+
+#: includes/source/core/source-comment.php:229
+msgid "Type"
+msgstr "Typ"
+
+#: includes/source/core/source-comment.php:224
+msgid "User Agent"
+msgstr "Användaragent"
+
+#: includes/source/core/source-comment.php:219
+msgid "Approval Status"
+msgstr "Godkännandestatus"
+
+#: includes/source/core/source-comment.php:216
+msgid "Spam"
+msgstr "Skräppost"
+
+#: includes/source/core/source-comment.php:212
+msgid "Approved"
+msgstr "Godkänd"
+
+#: includes/source/core/source-comment.php:208
+msgid "Unapproved"
+msgstr "Ej godkänd"
+
+#: includes/source/core/source-comment.php:199
+#: includes/source/core/source-post.php:295
+msgid "Date GMT"
+msgstr "Datum GMT"
+
+#: includes/source/core/source-comment.php:193
+#: includes/source/core/source-post.php:289
+msgid "Date"
+msgstr "Datum"
+
+#: includes/source/core/source-comment.php:188
+msgid "IP"
+msgstr "IP"
+
+#: includes/source/core/source-comment.php:161
+#: includes/source/core/source-post.php:282
+msgid "Author"
+msgstr "Författare"
+
+#: includes/source/core/source-comment.php:154
+msgid "Post ID"
+msgstr "Inläggs-ID"
+
+#: includes/source/core/source-comment.php:148
+#: includes/source/core/source-options.php:105
+#: includes/source/core/source-post.php:245
+#: includes/source/core/source-terms.php:114
+#: includes/source/core/source-user.php:127
+#: includes/source/plugin/source-redirection.php:151
+#: includes/source/plugin/source-redirection.php:474
+msgid "ID"
+msgstr "ID"
+
+#: includes/source/class-manager.php:76
+#: includes/source/core/source-terms.php:108
+msgid "Terms"
+msgstr "Termer"
+
+#: includes/source/class-manager.php:22
+#: includes/source/core/source-post.php:239
+msgid "Posts (core & custom)"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Please review your data and try again."
+msgstr "Granska dina data och försök igen."
+
+#: build/search-regex.js:2
+msgid "There was a problem making a request to your site. This could indicate you provided data that did not match requirements, or that the plugin sent a bad request."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Bad data"
+msgstr "Dålig data"
+
+#: build/search-regex.js:2
+msgid "Your WordPress REST API is returning a 404 page. This is almost certainly an external plugin or server configuration issue."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "2000 per page"
+msgstr "2000 per sida"
+
+#: build/search-regex.js:2
+msgid "1000 per page"
+msgstr "1000 per sida"
+
+#: build/search-regex.js:2
+msgid "Set a preset to use by default when Search Regex is loaded."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "No default preset"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Default Preset"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Your admin pages are being cached. Clear this cache and try again. There may be multiple caches involved."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "This is usually fixed by doing one of the following:"
+msgstr "Detta åtgärdas vanligtvis genom att göra något av detta:"
+
+#: build/search-regex.js:2
+msgid "You are using an old or cached session"
+msgstr "Du använder en gammal eller cachelagrad session"
+
+#: build/search-regex.js:2
+msgid "Debug Information"
+msgstr "Felsökningsinformation"
+
+#: build/search-regex.js:2
+msgid "Show debug"
+msgstr "Visa felsökning"
+
+#: build/search-regex.js:2
+msgid "WordPress returned an unexpected message. This could be a PHP error from another plugin, or data inserted by your theme."
+msgstr "WordPress returnerade ett oväntat meddelande. Detta kan vara ett PHP-fel från ett annat tillägg eller data som infogats av ditt tema."
+
+#: build/search-regex.js:2
+msgid "Your WordPress REST API has been disabled. You will need to enable it to continue."
+msgstr "Ditt WordPress REST API har inaktiverats. Du måste aktivera det för att fortsätta."
+
+#: build/search-regex.js:2
+msgid "Your REST API is being redirected. Please remove the redirection for the API."
+msgstr "Ditt REST API omdirigeras. Ta bort omdirigeringen för API:et."
+
+#: build/search-regex.js:2
+msgid "A security plugin or firewall is blocking access. You will need to whitelist the REST API."
+msgstr "Ett säkerhetstillägg eller brandvägg blockerar åtkomst. Du måste vitlista REST API:t."
+
+#: build/search-regex.js:2
+msgid "Check your {{link}}Site Health{{/link}} and fix any issues."
+msgstr "Kontrollera din {{link}}Hälsostatus för webbplats{{/ link}} och åtgärda eventuella problem."
+
+#: build/search-regex.js:6
+msgid "Preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Upload"
+msgstr "Ladda upp"
+
+#: build/search-regex.js:6
+msgid "Add file"
+msgstr "Lägg till fil"
+
+#: build/search-regex.js:2
+msgid "Preset saved"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Copy to clipboard"
+msgstr "Kopiera till urklipp"
+
+#: build/search-regex.js:6
+msgid "Are you sure you want to delete this preset?"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Locked fields"
+msgstr "Låsta fält"
+
+#: build/search-regex.js:6
+msgid "For example, create tag {{code}}URL{{/code}} and title {{code}}Image URL{{/code}}. Your search could be {{code}}<img src=\"URL\">{{/code}}. When the preset is used it will ask the user for the {{code}}Image URL{{/code}} instead of the full search phrase."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "A tag creates a custom input field. Insert the tag anywhere in the search, replace, text filter, or text action and when the preset is used it will be replaced with a custom text field with the tag label."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Enter tag which is used in the field"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Tag"
+msgstr "Etikett"
+
+#: build/search-regex.js:6
+msgid "Enter tag title shown to user"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Tags"
+msgstr "Etiketter"
+
+#: build/search-regex.js:6
+msgid "Locking a field removes it from the search form and prevents changes."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Fields"
+msgstr "Fält"
+
+#: build/search-regex.js:6
+msgid "Locked Fields"
+msgstr "Låsta fält"
+
+#: build/search-regex.js:6
+msgid "Advanced preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Describe the preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Preset Description"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Give the preset a name"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Preset Name"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Edit preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Results per page"
+msgstr "Resultat per sida"
+
+#: build/search-regex.js:6
+msgid "remove phrase"
+msgstr "ta bort fras"
+
+#: build/search-regex.js:6
+msgid "no phrase"
+msgstr "ingen fras"
+
+#: build/search-regex.js:6
+msgid "Import"
+msgstr "Importera"
+
+#: build/search-regex.js:6
+msgid "Please check your JSON data is a valid preset. You may have copied it incorrectly, or pasted something that is not a preset."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Unable to import preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Import preset from clipboard"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Done"
+msgstr "Klar"
+
+#: build/search-regex.js:6
+msgid "Uploaded %(total)d preset"
+msgid_plural "Uploaded %(total)d presets"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/search-regex.js:6
+msgid "Importing"
+msgstr "Importerar"
+
+#: build/search-regex.js:6
+msgid "File selected"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Click 'Add File' or drag and drop here."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Import a JSON file"
+msgstr "Importera en JSON-fil"
+
+#: build/search-regex.js:6
+msgid "Import JSON"
+msgstr "Importera JSON"
+
+#: build/search-regex.js:6
+msgid "Export JSON"
+msgstr "Exportera JSON"
+
+#: build/search-regex.js:6
+msgid "Download presets!"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "There are no presets"
+msgstr ""
+
+#: build/search-regex.js:4 build/search-regex.js:6
+msgid "Flags"
+msgstr "Flaggor"
+
+#: build/search-regex.js:21
+msgid "Presets"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "If that did not help then {{strong}}create an issue{{/strong}} or send it in an {{strong}}email{{/strong}}."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Please check the {{link}}support site{{/link}} before proceeding further."
+msgstr "Kontrollera {{link}}supportwebbplatsen{{/link}} innan du går vidare."
+
+#: build/search-regex.js:6
+msgid "Enter preset name"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Enter a name for your preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Saving Preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Update current preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Save search as new preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "No preset"
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Saving preset"
+msgstr ""
+
+#: includes/source/class-manager.php:158
+msgid "Advanced"
+msgstr "Avancerat"
+
+#: includes/source/class-manager.php:151
+msgid "Standard"
+msgstr "Standard"
+
+#: build/search-regex.js:19
+msgid "Please backup your data before making modifications."
+msgstr ""
+
+#: build/search-regex.js:18
+msgid "%s row."
+msgid_plural "%s rows."
+msgstr[0] "%s rad."
+msgstr[1] "%s rader."
+
+#: build/search-regex.js:2
+msgid "An unknown error occurred."
+msgstr "Ett okänt fel uppstod."
+
+#: includes/source/core/source-post.php:382
+msgid "GUID"
+msgstr "GUID"
+
+#: includes/source/core/source-post.php:259
+#: includes/source/core/source-terms.php:128
+msgid "Slug"
+msgstr "Slug"
+
+#: includes/source/core/source-post.php:301
+msgid "Excerpt"
+msgstr "Utdrag"
+
+#: includes/source/core/source-comment.php:181
+#: includes/source/core/source-post.php:274
+msgid "Content"
+msgstr "Innehåll"
+
+#: includes/source/core/source-user.php:148
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#: includes/source/core/source-user.php:141
+msgid "Nicename"
+msgstr "Smeknamn"
+
+#: includes/source/core/source-options.php:118
+msgid "Value"
+msgstr "Värde"
+
+#: includes/source/core/source-comment.php:241
+msgid "Comment"
+msgstr "Kommentar"
+
+#: includes/source/core/source-options.php:111
+#: includes/source/core/source-terms.php:121
+#: includes/source/plugin/source-redirection.php:480 build/search-regex.js:6
+msgid "Name"
+msgstr "Namn"
+
+#: includes/source/core/source-post.php:251
+#: includes/source/plugin/source-redirection.php:214 build/search-regex.js:6
+msgid "Title"
+msgstr "Rubrik"
+
+#: includes/source/core/source-comment.php:175
+#: includes/source/core/source-user.php:161
+msgid "URL"
+msgstr "URL"
+
+#. translators: 1: server PHP version. 2: required PHP version.
+#: search-regex.php:37
+msgid "Disabled! Detected PHP %1$s, need PHP %2$s+"
+msgstr ""
+
+#: includes/source/class-manager.php:165
+msgid "Plugins"
+msgstr "Tillägg"
+
+#: includes/source/class-manager.php:40
+msgid "WordPress Options"
+msgstr "WordPress-alternativ"
+
+#: includes/source/class-manager.php:70
+#: includes/source/core/source-user-meta.php:30
+msgid "User Meta"
+msgstr ""
+
+#: includes/source/class-manager.php:34
+#: includes/source/core/source-user.php:121
+msgid "Users"
+msgstr "Användare"
+
+#: includes/source/class-manager.php:64
+#: includes/source/core/source-comment-meta.php:23
+msgid "Comment Meta"
+msgstr ""
+
+#: includes/source/class-manager.php:28
+#: includes/source/core/source-comment.php:142
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: includes/source/class-manager.php:58
+#: includes/source/core/source-post-meta.php:25
+#: includes/source/core/source-post.php:420
+msgid "Post Meta"
+msgstr ""
+
+#: includes/search-regex-admin.php:467
+msgid "Please enable JavaScript"
+msgstr "Aktivera JavaScript"
+
+#: includes/search-regex-admin.php:463
+msgid "Loading, please wait..."
+msgstr "Laddar in, vänta …"
+
+#: includes/search-regex-admin.php:446
+msgid "Create Issue"
+msgstr ""
+
+#: includes/search-regex-admin.php:443
+msgid "<code>SearchRegexi10n</code> is not defined. This usually means another plugin is blocking Search Regex from loading. Please disable all plugins and try again."
+msgstr ""
+
+#: includes/search-regex-admin.php:442
+msgid "If you think Search Regex is at fault then create an issue."
+msgstr ""
+
+#: includes/search-regex-admin.php:441
+msgid "Please see the <a href=\"https://searchregex.com/support/problems/\">list of common problems</a>."
+msgstr ""
+
+#: includes/search-regex-admin.php:440
+msgid "Please note that Search Regex requires the WordPress REST API to be enabled. If you have disabled this then you won't be able to use Search Regex"
+msgstr ""
+
+#: includes/search-regex-admin.php:438
+msgid "Also check if your browser is able to load <code>search-regex.js</code>:"
+msgstr ""
+
+#: includes/search-regex-admin.php:436
+msgid "This may be caused by another plugin - look at your browser's error console for more details."
+msgstr ""
+
+#: includes/search-regex-admin.php:435
+msgid "Unable to load Search Regex ☹️"
+msgstr ""
+
+#: includes/search-regex-admin.php:420
+msgid "Unable to load Search Regex"
+msgstr ""
+
+#. translators: 1: Expected WordPress version, 2: Actual WordPress version
+#: includes/search-regex-admin.php:417
+msgid "Search Regex requires WordPress v%1$1s, you are using v%2$2s - please update your WordPress"
+msgstr ""
+
+#: includes/search-regex-admin.php:318
+msgid "Search Regex Support"
+msgstr ""
+
+#. translators: URL
+#: includes/search-regex-admin.php:309
+msgid "You can find full documentation about using Search Regex on the <a href=\"%s\" target=\"_blank\">searchregex.com</a> support site."
+msgstr ""
+
+#: includes/search-regex-admin.php:84
+msgid "Settings"
+msgstr "Inställningar"
+
+#: build/search-regex.js:6
+msgid "Action"
+msgstr "Åtgärd"
+
+#: build/search-regex.js:18
+msgid "Row ID"
+msgstr "Rad-ID"
+
+#: build/search-regex.js:8
+msgid "No more matching results found."
+msgstr "Inga fler matchande resultat hittades."
+
+#: build/search-regex.js:12
+msgid "Last page"
+msgstr "Sista sidan"
+
+#. translators: current=current page, total=total number of pages
+#: build/search-regex.js:12
+msgid "Page %(current)s of %(total)s"
+msgstr ""
+
+#: build/search-regex.js:12 build/search-regex.js:18
+msgid "Next page"
+msgstr "Nästa sida"
+
+#. translators: %current: current percent progress
+#: build/search-regex.js:18
+msgid "Progress %(current)s%%"
+msgstr ""
+
+#: build/search-regex.js:10
+msgid "Prev page"
+msgstr "Föregående sida"
+
+#: build/search-regex.js:10 build/search-regex.js:16
+msgid "First page"
+msgstr "Första sidan"
+
+#. translators: %s: total number of rows searched
+#: build/search-regex.js:14
+msgid "%s database row in total"
+msgid_plural "%s database rows in total"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/search-regex.js:2
+msgid "500 per page"
+msgstr "500 per sida"
+
+#: build/search-regex.js:2
+msgid "250 per page"
+msgstr "250 per sida"
+
+#: build/search-regex.js:2
+msgid "100 per page"
+msgstr "100 per sida"
+
+#: build/search-regex.js:2
+msgid "50 per page"
+msgstr "50 per sida"
+
+#: build/search-regex.js:2
+msgid "25 per page"
+msgstr "25 per sida"
+
+#: build/search-regex.js:2
+msgid "Ignore Case"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Regular Expression"
+msgstr "Vanligt uttryck"
+
+#: build/search-regex.js:2
+msgid "Row updated"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Row replaced"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Row deleted"
+msgstr "Rad borttagen"
+
+#: build/search-regex.js:2
+msgid "Settings saved"
+msgstr "Inställningar sparade"
+
+#: includes/search-regex-admin.php:301
+msgid "{{link}}Source Flags{{/link}} - additional options for the selected source. For example, include post {{guid}}GUID{{/guid}} in the search."
+msgstr ""
+
+#: includes/search-regex-admin.php:314
+msgid "{{link}}Source{{/link}} - the source of data you wish to search. For example, posts, pages, or comments."
+msgstr ""
+
+#: includes/search-regex-admin.php:313
+msgid "{{link}}Regular expression{{/link}} - a way of defining a pattern for text matching. Provides more advanced matches."
+msgstr ""
+
+#: includes/search-regex-admin.php:312
+msgid "{{link}}Search Flags{{/link}} - additional qualifiers for your search, to enable case insensitivity, and to enable regular expression support."
+msgstr ""
+
+#: includes/search-regex-admin.php:310
+msgid "The following concepts are used by Search Regex:"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Like this plugin? You might want to consider {{link}}Redirection{{/link}}, a plugin to manage redirects, from the same author."
+msgstr ""
+
+#: includes/source/plugin/source-redirection.php:145 build/search-regex.js:4
+msgid "Redirection"
+msgstr "Omdirigering"
+
+#: build/search-regex.js:4
+msgid "If you want to submit information that you don't want in a public repository then send it directly via {{email}}email{{/email}} - include as much information as you can!"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Please note that any support is provide on as-time-is-available basis and is not guaranteed. I do not provide paid support."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "If you want to report a bug please read the {{report}}Reporting Bugs{{/report}} guide."
+msgstr "Om du vill rapportera ett fel, läs guiden {{report}}rapportera fel{{/report}}."
+
+#: build/search-regex.js:4
+msgid "Full documentation for Search Regex can be found at {{site}}https://searchregex.com{{/site}}."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Need more help?"
+msgstr "Behöver du mer hjälp?"
+
+#: build/search-regex.js:6
+msgid "Results"
+msgstr "Resultat"
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Source"
+msgstr "Källa"
+
+#: build/search-regex.js:4
+msgid "Enter search phrase"
+msgstr "Ange sökfras"
+
+#: build/search-regex.js:18
+msgid "Replace All"
+msgstr "Ersätt alla"
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Search"
+msgstr "Sök"
+
+#: build/search-regex.js:19
+msgid "Search and replace information in your database."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Update"
+msgstr "Uppdatera"
+
+#: build/search-regex.js:2
+msgid "How Search Regex uses the REST API - don't change unless necessary"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "REST API"
+msgstr "REST API"
+
+#: build/search-regex.js:2
+msgid "I'm a nice person and I have helped support the author of this plugin"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Relative REST API"
+msgstr "Relativt REST API"
+
+#: build/search-regex.js:2
+msgid "Raw REST API"
+msgstr "Obearbetat REST-API"
+
+#: build/search-regex.js:2
+msgid "Default REST API"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Plugin Support"
+msgstr "Support för tillägget"
+
+#: build/search-regex.js:4
+msgid "Support 💰"
+msgstr "Support 💰"
+
+#: build/search-regex.js:4
+msgid "You get useful software and I get to carry on making it better."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Search Regex is free to use - life is wonderful and lovely! It has required a great deal of time and effort to develop and you can help support this development by {{strong}}making a small donation{{/strong}}."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "I'd like to support some more."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "You've supported this plugin - thank you!"
+msgstr "Du har stöttat detta tillägg – tack!"
+
+#: build/search-regex.js:4
+msgid "If that doesn't help, open your browser's error console and create a {{link}}new issue{{/link}} with the details."
+msgstr ""
+
+#: includes/search-regex-admin.php:437 build/search-regex.js:4
+msgid "If you are using a page caching plugin or service (CloudFlare, OVH, etc) then you can also try clearing that cache."
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "Search Regex is not working. Try clearing your browser cache and reloading this page."
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "clearing your cache."
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "If you are using a caching system such as Cloudflare then please read this: "
+msgstr ""
+
+#: build/search-regex.js:19
+msgid "Please clear your browser cache and reload this page."
+msgstr "Rensa din webbläsares cache och ladda om denna sida."
+
+#: build/search-regex.js:19
+msgid "Cached Search Regex detected"
+msgstr ""
+
+#. translators: number of results to show
+#: build/search-regex.js:8
+msgid "Show %s more"
+msgid_plural "Show %s more"
+msgstr[0] "Visa %s till"
+msgstr[1] "Visa %s fler"
+
+#: build/search-regex.js:6
+msgid "Maximum number of matches exceeded and hidden from view. These will be included in any replacements."
+msgstr ""
+
+#: build/search-regex.js:6
+msgid "Delete"
+msgstr "Ta bort"
+
+#: build/search-regex.js:6 build/search-regex.js:8
+msgid "Edit"
+msgstr "Redigera"
+
+#: build/search-regex.js:4
+msgid "Check Again"
+msgstr "Kontrollera igen"
+
+#. translators: test percent
+#: build/search-regex.js:4
+msgid "Testing - %s%%"
+msgstr "Testar – %s%%"
+
+#: build/search-regex.js:2
+msgid "Show Problems"
+msgstr "Visa problem"
+
+#: build/search-regex.js:2
+msgid "Summary"
+msgstr "Sammanfattning"
+
+#: build/search-regex.js:2
+msgid "You are using a broken REST API route. Changing to a working API should fix the problem."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Your REST API is not working and the plugin will not be able to continue until this is fixed."
+msgstr "Ditt REST-API fungerar inte och tillägget kan inte fortsätta förrän detta är åtgärdat."
+
+#: build/search-regex.js:2
+msgid "There are some problems connecting to your REST API. It is not necessary to fix these problems and the plugin is able to work."
+msgstr "Det finns några problem med att ansluta till ditt REST-API. Det är inte nödvändigt att åtgärda dessa problem och tillägget kan fungera."
+
+#: build/search-regex.js:2
+msgid "Unavailable"
+msgstr "Inte tillgänglig"
+
+#: build/search-regex.js:2
+msgid "Not working but fixable"
+msgstr "Fungerar inte men kan åtgärdas"
+
+#: build/search-regex.js:2
+msgid "Working but some issues"
+msgstr "Fungerar men vissa problem"
+
+#: build/search-regex.js:2
+msgid "Good"
+msgstr "Bra"
+
+#: build/search-regex.js:2
+msgid "Current API"
+msgstr "Nuvarande API"
+
+#: build/search-regex.js:2
+msgid "Switch to this API"
+msgstr "Byt till detta API"
+
+#: build/search-regex.js:2
+msgid "Hide"
+msgstr "Dölj"
+
+#: build/search-regex.js:2
+msgid "Show Full"
+msgstr "Visa fullständig"
+
+#: build/search-regex.js:2
+msgid "Working!"
+msgstr "Fungerar!"
+
+#: build/search-regex.js:19
+msgid "Finished!"
+msgstr ""
+
+#: build/search-regex.js:6 build/search-regex.js:18
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: build/search-regex.js:4 build/search-regex.js:6
+msgid "Replace"
+msgstr "Ersätt"
+
+#: build/search-regex.js:4 build/search-regex.js:6
+msgid "Remove"
+msgstr "Ta bort"
+
+#: build/search-regex.js:2 build/search-regex.js:6
+msgid "Multi"
+msgstr "Flera"
+
+#: build/search-regex.js:6
+msgid "Single"
+msgstr ""
+
+#: build/search-regex.js:21
+msgid "Support"
+msgstr "Support"
+
+#: includes/source/core/source-options.php:99 build/search-regex.js:21
+msgid "Options"
+msgstr "Alternativ"
+
+#: build/search-regex.js:21
+msgid "Search & Replace"
+msgstr ""
+
+#: build/search-regex.js:4
+msgid "If you are using WordPress 5.2 or newer then look at your {{link}}Site Health{{/link}} and resolve any issues."
+msgstr "Om du använder WordPress 5.2 eller nyare, titta på din {{link}}Hälsokontroll för webbplatser{{/ link}} och lös eventuella problem."
+
+#: build/search-regex.js:4
+msgid "{{link}}Please temporarily disable other plugins!{{/link}} This fixes so many problems."
+msgstr "{{link}}Inaktivera andra tillägg tillfälligt!{{/link}} Detta åtgärdar så många problem."
+
+#: build/search-regex.js:4
+msgid "{{link}}Caching software{{/link}}, in particular Cloudflare, can cache the wrong thing. Try clearing all your caches."
+msgstr ""
+
+#: build/search-regex.js:4 build/search-regex.js:19
+msgid "What do I do next?"
+msgstr "Vad gör jag härnäst?"
+
+#: build/search-regex.js:2
+msgid "Something went wrong 🙁"
+msgstr "Något gick snett 🙁"
+
+#: build/search-regex.js:2
+msgid "Log out, clear your browser cache, and log in again - your browser has cached an old session."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Reload the page - your current session is old."
+msgstr "Ladda om sidan – din nuvarande session är gammal."
+
+#: build/search-regex.js:2
+msgid "Include these details in your report along with a description of what you were doing and a screenshot."
+msgstr "Inkludera dessa detaljer i din rapport tillsammans med en beskrivning av vad du gjorde och en skärmdump."
+
+#: includes/source/core/source-comment.php:168
+#: includes/source/core/source-user.php:155 build/search-regex.js:2
+#: build/search-regex.js:6 build/search-regex.js:19
+msgid "Email"
+msgstr "E-post"
+
+#: build/search-regex.js:2 build/search-regex.js:6 build/search-regex.js:19
+msgid "Create An Issue"
+msgstr ""
+
+#: includes/source/core/source-post.php:320
+#: includes/source/core/source-post.php:336
+msgid "Closed"
+msgstr "Stängt"
+
+#: build/search-regex.js:6
+msgid "Save"
+msgstr "Spara"
+
+#: build/search-regex.js:2
+msgid "Unable to make request due to browser security. This is typically because your WordPress and Site URL settings are inconsistent, or the request was blocked by your site CORS policy."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Possible cause"
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "This could be a security plugin, or your server is out of memory or has an external error. Please check your server error log"
+msgstr "Detta kan vara ett säkerhetstillägg, eller servern har slut på minne eller har ett externt fel. Kontrollera din serverfellogg"
+
+#: build/search-regex.js:2
+msgid "Your server has rejected the request for being too big. You will need to reconfigure it to continue."
+msgstr "Din server har avisat begäran för att den var för stor. Du måste konfigurera den igen för att fortsätta."
+
+#: build/search-regex.js:2
+msgid "Your REST API is probably being blocked by a security plugin. Please disable this, or configure it to allow REST API requests."
+msgstr ""
+
+#: build/search-regex.js:2
+msgid "Read this REST API guide for more information."
+msgstr "Läs denna REST API-guide för mer information."
+
+#: build/search-regex.js:2
+msgid "WordPress did not return a response. This could mean an error occurred or that the request was blocked. Please check your server error_log."
+msgstr ""
+
+#. Author of the plugin
+msgid "John Godley"
+msgstr "John Godley"
+
+#. Description of the plugin
+msgid "Adds search and replace functionality across posts, pages, comments, and meta-data, with full regular expression support"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://searchregex.com/"
+msgstr "https://searchregex.com/"
+
+#. Plugin Name of the plugin
+#: build/search-regex.js:21
+msgid "Search Regex"
+msgstr "Search Regex"
