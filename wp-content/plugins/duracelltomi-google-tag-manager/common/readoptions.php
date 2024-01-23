@@ -124,6 +124,7 @@ define( 'GTM4WP_OPTION_INTEGRATE_WCORDERMAXAGE', 'integrate-woocommerce-order-ma
 define( 'GTM4WP_OPTION_INTEGRATE_WCEXCLUDETAX', 'integrate-woocommerce-exclude-tax' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCEXCLUDESHIPPING', 'integrate-woocommerce-exclude-shipping' );
 define( 'GTM4WP_OPTION_INTEGRATE_WCNOORDERTRACKEDFLAG', 'integrate-woocommerce-do-not-use-order-tracked-flag' );
+define( 'GTM4WP_OPTION_INTEGRATE_WCCLEARECOMMERCEDL', 'integrate-woocommerce-clear-ecommerce-datalayer' );
 
 define( 'GTM4WP_OPTION_INTEGRATE_GOOGLEOPTIMIZEIDS', 'integrate-google-optimize-idlist' );
 define( 'GTM4WP_OPTION_INTEGRATE_GOOGLEOPTIMIZETIMEOUT', 'integrate-google-optimize-timeout' );
@@ -133,6 +134,13 @@ define( 'GTM4WP_OPTION_INTEGRATE_WPECOMMERCE', 'integrate-wp-e-commerce' );
 define( 'GTM4WP_OPTION_INTEGRATE_AMPID', 'integrate-amp-id' );
 
 define( 'GTM4WP_OPTION_INTEGRATE_COOKIEBOT', 'integrate-cookiebot' );
+
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE', 'integrate-consent-mode' );
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE_ADS', 'integrate-consent-mode-ads' );
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE_ANALYTICS', 'integrate-consent-mode-analytics' );
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE_PERSO', 'integrate-consent-mode-perso' );
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE_FUNC', 'integrate-consent-mode-func' );
+define( 'GTM4WP_OPTION_INTEGRATE_CONSENTMODE_SECURUTY', 'integrate-consent-mode-security' );
 
 define( 'GTM4WP_PLACEMENT_FOOTER', 0 );
 define( 'GTM4WP_PLACEMENT_BODYOPEN', 1 );
@@ -225,6 +233,7 @@ $gtm4wp_defaultoptions = array(
 	GTM4WP_OPTION_INTEGRATE_WCEXCLUDETAX          => false,
 	GTM4WP_OPTION_INTEGRATE_WCEXCLUDESHIPPING     => false,
 	GTM4WP_OPTION_INTEGRATE_WCNOORDERTRACKEDFLAG  => false,
+	GTM4WP_OPTION_INTEGRATE_WCCLEARECOMMERCEDL    => false,
 
 	GTM4WP_OPTION_INTEGRATE_GOOGLEOPTIMIZEIDS     => '',
 	GTM4WP_OPTION_INTEGRATE_GOOGLEOPTIMIZETIMEOUT => 4000,
@@ -234,6 +243,13 @@ $gtm4wp_defaultoptions = array(
 	GTM4WP_OPTION_INTEGRATE_AMPID                 => '',
 
 	GTM4WP_OPTION_INTEGRATE_COOKIEBOT             => false,
+
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE           => false,
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE_ADS       => false,
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE_ANALYTICS => false,
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE_PERSO     => false,
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE_FUNC      => false,
+	GTM4WP_OPTION_INTEGRATE_CONSENTMODE_SECURUTY  => false,
 );
 
 $gtm4wp_business_verticals = array(
